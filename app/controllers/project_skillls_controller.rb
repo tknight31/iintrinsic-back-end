@@ -1,2 +1,0 @@
-class ProjectSkilllsController < ApplicationController
-end
