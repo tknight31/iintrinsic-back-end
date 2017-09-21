@@ -6,11 +6,10 @@ class Api::V1::ProjectsController < ApplicationController
 
   def create
     @project = Project.new(project_params)
-    byebug
+    @project.creator_id = 6
     @project.save
 
     index
-
   end
 
   def update
