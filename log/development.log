@@ -2729,3 +2729,1874 @@ Completed 200 OK in 68ms (Views: 8.3ms | ActiveRecord: 32.4ms)
 Completed 200 OK in 43ms (Views: 4.9ms | ActiveRecord: 2.9ms)
 
 
+Started GET "/api/v1/users" for 127.0.0.1 at 2017-09-22 11:42:19 -0400
+Started GET "/api/v1/projects" for 127.0.0.1 at 2017-09-22 11:42:19 -0400
+Processing by Api::V1::UsersController#index as JSON
+  Parameters: {"user"=>{}}
+Processing by Api::V1::ProjectsController#index as JSON
+  Parameters: {"project"=>{}}
+  [1m[36mUser Load (6.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 10], ["LIMIT", 1]]
+  [1m[36mUser Load (50.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 10], ["LIMIT", 1]]
+  [1m[36mProject Load (44.2ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+Completed 200 OK in 145ms (Views: 47.7ms | ActiveRecord: 50.8ms)
+
+
+  [1m[36mUser Load (79.6ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+Completed 200 OK in 196ms (Views: 14.1ms | ActiveRecord: 129.7ms)
+
+
+Started GET "/api/v1/users/10" for 127.0.0.1 at 2017-09-22 11:42:19 -0400
+Processing by Api::V1::UsersController#show as JSON
+  Parameters: {"id"=>"10", "user"=>{}}
+  [1m[36mUser Load (1.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 10], ["LIMIT", 1]]
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 10], ["LIMIT", 1]]
+Completed 200 OK in 35ms (Views: 1.2ms | ActiveRecord: 2.3ms)
+
+
+Started GET "/api/v1/users/10" for 127.0.0.1 at 2017-09-22 11:44:11 -0400
+Processing by Api::V1::UsersController#show as JSON
+  Parameters: {"id"=>"10", "user"=>{}}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 10], ["LIMIT", 1]]
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 10], ["LIMIT", 1]]
+Completed 200 OK in 7ms (Views: 2.2ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/api/v1/projects" for 127.0.0.1 at 2017-09-22 11:44:11 -0400
+Processing by Api::V1::ProjectsController#index as JSON
+Started GET "/api/v1/users" for 127.0.0.1 at 2017-09-22 11:44:11 -0400
+  Parameters: {"project"=>{}}
+Processing by Api::V1::UsersController#index as JSON
+  Parameters: {"user"=>{}}
+  [1m[36mUser Load (2.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 10], ["LIMIT", 1]]
+  [1m[36mUser Load (8.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 10], ["LIMIT", 1]]
+  [1m[36mUser Load (5.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+Completed 200 OK in 55ms (Views: 6.2ms | ActiveRecord: 8.1ms)
+
+
+  [1m[36mProject Load (7.2ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+Completed 200 OK in 62ms (Views: 5.6ms | ActiveRecord: 15.8ms)
+
+
+Started GET "/api/v1/projects" for 127.0.0.1 at 2017-09-22 11:44:21 -0400
+Processing by Api::V1::ProjectsController#index as JSON
+  Parameters: {"project"=>{}}
+Started GET "/api/v1/users" for 127.0.0.1 at 2017-09-22 11:44:21 -0400
+Started GET "/api/v1/users/10" for 127.0.0.1 at 2017-09-22 11:44:21 -0400
+Processing by Api::V1::UsersController#index as JSON
+  Parameters: {"user"=>{}}
+Processing by Api::V1::UsersController#show as JSON
+  Parameters: {"id"=>"10", "user"=>{}}
+  [1m[36mUser Load (7.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 10], ["LIMIT", 1]]
+  [1m[36mProject Load (1.7ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+Completed 200 OK in 20ms (Views: 6.2ms | ActiveRecord: 9.2ms)
+
+
+  [1m[36mUser Load (5.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 10], ["LIMIT", 1]]
+  [1m[36mUser Load (5.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 10], ["LIMIT", 1]]
+  [1m[36mUser Load (3.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 10], ["LIMIT", 1]]
+Completed 200 OK in 19ms (Views: 2.0ms | ActiveRecord: 8.8ms)
+
+
+  [1m[36mUser Load (120.0ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+Completed 200 OK in 143ms (Views: 7.6ms | ActiveRecord: 125.7ms)
+
+
+Started GET "/api/v1/projects" for 127.0.0.1 at 2017-09-22 11:44:24 -0400
+Processing by Api::V1::ProjectsController#index as JSON
+  Parameters: {"project"=>{}}
+Started GET "/api/v1/users/10" for 127.0.0.1 at 2017-09-22 11:44:24 -0400
+Processing by Api::V1::UsersController#show as JSON
+  Parameters: {"id"=>"10", "user"=>{}}
+Started GET "/api/v1/users" for 127.0.0.1 at 2017-09-22 11:44:24 -0400
+Processing by Api::V1::UsersController#index as JSON
+  [1m[36mUser Load (1.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 10], ["LIMIT", 1]]
+  [1m[36mUser Load (2.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 10], ["LIMIT", 1]]
+  Parameters: {"user"=>{}}
+  [1m[36mUser Load (1.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 10], ["LIMIT", 1]]
+  [1m[36mProject Load (0.9ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+Completed 200 OK in 8ms (Views: 0.9ms | ActiveRecord: 3.0ms)
+
+
+Completed 200 OK in 17ms (Views: 6.1ms | ActiveRecord: 3.0ms)
+
+
+  [1m[36mUser Load (4.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 10], ["LIMIT", 1]]
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+Completed 200 OK in 15ms (Views: 3.9ms | ActiveRecord: 5.2ms)
+
+
+Started GET "/api/v1/projects" for 127.0.0.1 at 2017-09-22 11:45:12 -0400
+Processing by Api::V1::ProjectsController#index as JSON
+  Parameters: {"project"=>{}}
+Started GET "/api/v1/users" for 127.0.0.1 at 2017-09-22 11:45:12 -0400
+Processing by Api::V1::UsersController#index as JSON
+  Parameters: {"user"=>{}}
+Started GET "/api/v1/users/10" for 127.0.0.1 at 2017-09-22 11:45:12 -0400
+Processing by Api::V1::UsersController#show as JSON
+  Parameters: {"id"=>"10", "user"=>{}}
+  [1m[36mUser Load (52.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 10], ["LIMIT", 1]]
+  [1m[36mProject Load (19.3ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 10], ["LIMIT", 1]]
+Completed 200 OK in 85ms (Views: 5.2ms | ActiveRecord: 71.6ms)
+
+
+  [1m[36mUser Load (4.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 10], ["LIMIT", 1]]
+  [1m[36mUser Load (1.9ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+Completed 200 OK in 39ms (Views: 4.4ms | ActiveRecord: 2.6ms)
+
+
+  [1m[36mUser Load (4.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 10], ["LIMIT", 1]]
+Completed 200 OK in 39ms (Views: 1.3ms | ActiveRecord: 8.7ms)
+
+
+Started GET "/api/v1/projects" for 127.0.0.1 at 2017-09-22 11:46:10 -0400
+Started GET "/api/v1/users" for 127.0.0.1 at 2017-09-22 11:46:10 -0400
+Processing by Api::V1::ProjectsController#index as JSON
+Processing by Api::V1::UsersController#index as JSON
+  Parameters: {"project"=>{}}
+Started GET "/api/v1/users/10" for 127.0.0.1 at 2017-09-22 11:46:10 -0400
+  Parameters: {"user"=>{}}
+Processing by Api::V1::UsersController#show as JSON
+  Parameters: {"id"=>"10", "user"=>{}}
+  [1m[36mUser Load (19.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 10], ["LIMIT", 1]]
+  [1m[36mProject Load (57.7ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  [1m[36mUser Load (15.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 10], ["LIMIT", 1]]
+Completed 200 OK in 107ms (Views: 19.4ms | ActiveRecord: 77.1ms)
+
+
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 10], ["LIMIT", 1]]
+  [1m[36mUser Load (8.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 10], ["LIMIT", 1]]
+Completed 200 OK in 126ms (Views: 1.5ms | ActiveRecord: 9.6ms)
+
+
+  [1m[36mUser Load (33.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+Completed 200 OK in 139ms (Views: 8.9ms | ActiveRecord: 48.4ms)
+
+
+Started GET "/api/v1/projects" for 127.0.0.1 at 2017-09-22 11:46:17 -0400
+Started GET "/api/v1/users" for 127.0.0.1 at 2017-09-22 11:46:17 -0400
+Started GET "/api/v1/users/10" for 127.0.0.1 at 2017-09-22 11:46:17 -0400
+Processing by Api::V1::ProjectsController#index as JSON
+Processing by Api::V1::UsersController#index as JSON
+Processing by Api::V1::UsersController#show as JSON
+  Parameters: {"project"=>{}}
+  Parameters: {"user"=>{}}
+  Parameters: {"id"=>"10", "user"=>{}}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 10], ["LIMIT", 1]]
+  [1m[36mUser Load (2.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 10], ["LIMIT", 1]]
+  [1m[36mUser Load (2.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 10], ["LIMIT", 1]]
+  [1m[36mProject Load (4.2ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+Completed 200 OK in 17ms (Views: 8.4ms | ActiveRecord: 4.8ms)
+
+
+  [1m[36mUser Load (162.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 10], ["LIMIT", 1]]
+Completed 200 OK in 170ms (Views: 1.4ms | ActiveRecord: 164.2ms)
+
+
+  [1m[36mUser Load (168.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+Completed 200 OK in 182ms (Views: 5.8ms | ActiveRecord: 171.1ms)
+
+
+Started GET "/api/v1/projects" for 127.0.0.1 at 2017-09-22 11:46:43 -0400
+Processing by Api::V1::ProjectsController#index as JSON
+  Parameters: {"project"=>{}}
+Started GET "/api/v1/users" for 127.0.0.1 at 2017-09-22 11:46:43 -0400
+Processing by Api::V1::UsersController#index as JSON
+  Parameters: {"user"=>{}}
+Started GET "/api/v1/users/10" for 127.0.0.1 at 2017-09-22 11:46:43 -0400
+  [1m[36mUser Load (6.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 10], ["LIMIT", 1]]
+Processing by Api::V1::UsersController#show as JSON
+  Parameters: {"id"=>"10", "user"=>{}}
+  [1m[36mUser Load (5.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 10], ["LIMIT", 1]]
+  [1m[36mUser Load (6.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 10], ["LIMIT", 1]]
+  [1m[36mProject Load (95.4ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  [1m[36mUser Load (87.6ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+Completed 200 OK in 115ms (Views: 11.3ms | ActiveRecord: 92.9ms)
+
+
+Completed 200 OK in 135ms (Views: 23.6ms | ActiveRecord: 101.4ms)
+
+
+  [1m[36mUser Load (109.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 10], ["LIMIT", 1]]
+Completed 200 OK in 123ms (Views: 1.4ms | ActiveRecord: 115.8ms)
+
+
+Started GET "/api/v1/projects" for 127.0.0.1 at 2017-09-22 11:46:45 -0400
+Processing by Api::V1::ProjectsController#index as JSON
+  Parameters: {"project"=>{}}
+Started GET "/api/v1/users" for 127.0.0.1 at 2017-09-22 11:46:45 -0400
+Processing by Api::V1::UsersController#index as JSON
+  Parameters: {"user"=>{}}
+Started GET "/api/v1/users/10" for 127.0.0.1 at 2017-09-22 11:46:45 -0400
+Processing by Api::V1::UsersController#show as JSON
+  Parameters: {"id"=>"10", "user"=>{}}
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 10], ["LIMIT", 1]]
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 10], ["LIMIT", 1]]
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 10], ["LIMIT", 1]]
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 10], ["LIMIT", 1]]
+  [1m[36mProject Load (1.5ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+Completed 200 OK in 17ms (Views: 1.1ms | ActiveRecord: 2.0ms)
+
+
+Completed 200 OK in 47ms (Views: 9.0ms | ActiveRecord: 2.5ms)
+
+
+  [1m[36mUser Load (10.5ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+Completed 200 OK in 52ms (Views: 8.7ms | ActiveRecord: 11.2ms)
+
+
+Started GET "/api/v1/users/10" for 127.0.0.1 at 2017-09-22 11:46:48 -0400
+Started GET "/api/v1/users" for 127.0.0.1 at 2017-09-22 11:46:48 -0400
+Processing by Api::V1::UsersController#index as JSON
+Processing by Api::V1::UsersController#show as JSON
+Started GET "/api/v1/projects" for 127.0.0.1 at 2017-09-22 11:46:48 -0400
+  Parameters: {"user"=>{}}
+  Parameters: {"id"=>"10", "user"=>{}}
+Processing by Api::V1::ProjectsController#index as JSON
+  Parameters: {"project"=>{}}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 10], ["LIMIT", 1]]
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 10], ["LIMIT", 1]]
+  [1m[36mUser Load (2.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 10], ["LIMIT", 1]]
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+Completed 200 OK in 8ms (Views: 3.6ms | ActiveRecord: 1.7ms)
+
+
+  [1m[36mProject Load (4.0ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  [1m[36mUser Load (3.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 10], ["LIMIT", 1]]
+Completed 200 OK in 11ms (Views: 4.6ms | ActiveRecord: 5.0ms)
+
+
+Completed 200 OK in 13ms (Views: 0.8ms | ActiveRecord: 5.7ms)
+
+
+Started GET "/api/v1/projects" for 127.0.0.1 at 2017-09-22 11:47:20 -0400
+Processing by Api::V1::ProjectsController#index as JSON
+  Parameters: {"project"=>{}}
+Started GET "/api/v1/users" for 127.0.0.1 at 2017-09-22 11:47:20 -0400
+Started GET "/api/v1/users/10" for 127.0.0.1 at 2017-09-22 11:47:20 -0400
+Processing by Api::V1::UsersController#index as JSON
+Processing by Api::V1::UsersController#show as JSON
+  [1m[36mUser Load (3.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 10], ["LIMIT", 1]]
+  Parameters: {"user"=>{}}
+  Parameters: {"id"=>"10", "user"=>{}}
+  [1m[36mProject Load (1.4ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+Completed 200 OK in 13ms (Views: 5.5ms | ActiveRecord: 4.8ms)
+
+
+  [1m[36mUser Load (6.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 10], ["LIMIT", 1]]
+  [1m[36mUser Load (7.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 10], ["LIMIT", 1]]
+  [1m[36mUser Load (1.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 10], ["LIMIT", 1]]
+  [1m[36mUser Load (3.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+Completed 200 OK in 14ms (Views: 1.3ms | ActiveRecord: 9.0ms)
+
+
+Completed 200 OK in 20ms (Views: 8.1ms | ActiveRecord: 9.1ms)
+
+
+Started GET "/api/v1/users" for 127.0.0.1 at 2017-09-22 11:47:23 -0400
+Processing by Api::V1::UsersController#index as JSON
+  Parameters: {"user"=>{}}
+Started GET "/api/v1/users/10" for 127.0.0.1 at 2017-09-22 11:47:23 -0400
+Processing by Api::V1::UsersController#show as JSON
+  Parameters: {"id"=>"10", "user"=>{}}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 10], ["LIMIT", 1]]
+  [1m[36mUser Load (4.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 10], ["LIMIT", 1]]
+  [1m[36mUser Load (5.7ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+Completed 200 OK in 17ms (Views: 5.1ms | ActiveRecord: 6.1ms)
+
+
+  [1m[36mUser Load (3.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 10], ["LIMIT", 1]]
+Completed 200 OK in 15ms (Views: 1.1ms | ActiveRecord: 7.5ms)
+
+
+Started GET "/api/v1/projects" for 127.0.0.1 at 2017-09-22 11:48:06 -0400
+Processing by Api::V1::ProjectsController#index as JSON
+  Parameters: {"project"=>{}}
+  [1m[36mUser Load (2.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 10], ["LIMIT", 1]]
+  [1m[36mProject Load (13.6ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+Completed 200 OK in 51ms (Views: 6.8ms | ActiveRecord: 15.9ms)
+
+
+Started GET "/api/v1/users" for 127.0.0.1 at 2017-09-22 11:48:06 -0400
+Processing by Api::V1::UsersController#index as JSON
+  Parameters: {"user"=>{}}
+Started GET "/api/v1/users/10" for 127.0.0.1 at 2017-09-22 11:48:06 -0400
+Processing by Api::V1::UsersController#show as JSON
+  Parameters: {"id"=>"10", "user"=>{}}
+  [1m[36mUser Load (5.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 10], ["LIMIT", 1]]
+  [1m[36mUser Load (5.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 10], ["LIMIT", 1]]
+  [1m[36mUser Load (1.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+Completed 200 OK in 21ms (Views: 3.2ms | ActiveRecord: 6.5ms)
+
+
+  [1m[36mUser Load (3.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 10], ["LIMIT", 1]]
+Completed 200 OK in 19ms (Views: 1.3ms | ActiveRecord: 8.9ms)
+
+
+Started GET "/api/v1/users" for 127.0.0.1 at 2017-09-22 11:48:10 -0400
+Processing by Api::V1::UsersController#index as JSON
+  Parameters: {"user"=>{}}
+Started GET "/api/v1/users/10" for 127.0.0.1 at 2017-09-22 11:48:10 -0400
+Processing by Api::V1::UsersController#show as JSON
+  Parameters: {"id"=>"10", "user"=>{}}
+  [1m[36mUser Load (3.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 10], ["LIMIT", 1]]
+  [1m[36mUser Load (2.0ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+Completed 200 OK in 19ms (Views: 6.1ms | ActiveRecord: 5.4ms)
+
+
+  [1m[36mUser Load (15.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 10], ["LIMIT", 1]]
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 10], ["LIMIT", 1]]
+Completed 200 OK in 27ms (Views: 1.3ms | ActiveRecord: 16.7ms)
+
+
+Started GET "/api/v1/users" for 127.0.0.1 at 2017-09-22 11:48:11 -0400
+Started GET "/api/v1/projects" for 127.0.0.1 at 2017-09-22 11:48:11 -0400
+Processing by Api::V1::ProjectsController#index as JSON
+  Parameters: {"project"=>{}}
+Processing by Api::V1::UsersController#index as JSON
+  Parameters: {"user"=>{}}
+Started GET "/api/v1/users/10" for 127.0.0.1 at 2017-09-22 11:48:11 -0400
+Processing by Api::V1::UsersController#show as JSON
+  Parameters: {"id"=>"10", "user"=>{}}
+  [1m[36mUser Load (3.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 10], ["LIMIT", 1]]
+  [1m[36mUser Load (3.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 10], ["LIMIT", 1]]
+  [1m[36mUser Load (3.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+Completed 200 OK in 16ms (Views: 6.1ms | ActiveRecord: 6.9ms)
+
+
+  [1m[36mProject Load (7.6ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+Completed 200 OK in 36ms (Views: 14.7ms | ActiveRecord: 10.8ms)
+
+
+  [1m[36mUser Load (23.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 10], ["LIMIT", 1]]
+  [1m[36mUser Load (2.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 10], ["LIMIT", 1]]
+Completed 200 OK in 36ms (Views: 2.1ms | ActiveRecord: 25.8ms)
+
+
+Started GET "/api/v1/users" for 127.0.0.1 at 2017-09-22 11:48:12 -0400
+Processing by Api::V1::UsersController#index as JSON
+  Parameters: {"user"=>{}}
+Started GET "/api/v1/users/10" for 127.0.0.1 at 2017-09-22 11:48:12 -0400
+Processing by Api::V1::UsersController#show as JSON
+  Parameters: {"id"=>"10", "user"=>{}}
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 10], ["LIMIT", 1]]
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 10], ["LIMIT", 1]]
+Completed 200 OK in 47ms (Views: 4.2ms | ActiveRecord: 1.7ms)
+
+
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 10], ["LIMIT", 1]]
+Completed 200 OK in 36ms (Views: 1.2ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/api/v1/users" for 127.0.0.1 at 2017-09-22 11:51:10 -0400
+Started GET "/api/v1/users/10" for 127.0.0.1 at 2017-09-22 11:51:10 -0400
+Processing by Api::V1::UsersController#index as JSON
+  Parameters: {"user"=>{}}
+Processing by Api::V1::UsersController#show as JSON
+  Parameters: {"id"=>"10", "user"=>{}}
+  [1m[36mUser Load (4.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 10], ["LIMIT", 1]]
+  [1m[36mUser Load (40.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 10], ["LIMIT", 1]]
+  [1m[36mUser Load (18.1ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+Completed 200 OK in 195ms (Views: 38.6ms | ActiveRecord: 22.1ms)
+
+
+  [1m[36mUser Load (19.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 10], ["LIMIT", 1]]
+Completed 200 OK in 186ms (Views: 1.6ms | ActiveRecord: 60.5ms)
+
+
+Started GET "/api/v1/users" for 127.0.0.1 at 2017-09-22 11:51:14 -0400
+Processing by Api::V1::UsersController#index as JSON
+  Parameters: {"user"=>{}}
+Started GET "/api/v1/projects" for 127.0.0.1 at 2017-09-22 11:51:14 -0400
+Processing by Api::V1::ProjectsController#index as JSON
+  Parameters: {"project"=>{}}
+Started GET "/api/v1/users/10" for 127.0.0.1 at 2017-09-22 11:51:14 -0400
+Processing by Api::V1::UsersController#show as JSON
+  Parameters: {"id"=>"10", "user"=>{}}
+  [1m[36mUser Load (73.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 10], ["LIMIT", 1]]
+  [1m[36mUser Load (4.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[36mUser Load (51.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 10], ["LIMIT", 1]]
+Completed 200 OK in 113ms (Views: 4.7ms | ActiveRecord: 77.4ms)
+
+
+  [1m[36mUser Load (4.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 10], ["LIMIT", 1]]
+  [1m[36mProject Load (2.6ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+Completed 200 OK in 103ms (Views: 5.8ms | ActiveRecord: 54.4ms)
+
+
+  [1m[36mUser Load (6.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 10], ["LIMIT", 1]]
+Completed 200 OK in 99ms (Views: 1.4ms | ActiveRecord: 10.8ms)
+
+
+Started GET "/api/v1/projects" for 127.0.0.1 at 2017-09-22 11:51:46 -0400
+Started GET "/api/v1/users" for 127.0.0.1 at 2017-09-22 11:51:46 -0400
+Started GET "/api/v1/users/10" for 127.0.0.1 at 2017-09-22 11:51:46 -0400
+Processing by Api::V1::ProjectsController#index as JSON
+  Parameters: {"project"=>{}}
+Processing by Api::V1::UsersController#index as JSON
+  Parameters: {"user"=>{}}
+Processing by Api::V1::UsersController#show as JSON
+  Parameters: {"id"=>"10", "user"=>{}}
+  [1m[36mUser Load (2.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 10], ["LIMIT", 1]]
+  [1m[36mUser Load (1.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 10], ["LIMIT", 1]]
+  [1m[36mUser Load (8.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 10], ["LIMIT", 1]]
+  [1m[36mUser Load (37.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 10], ["LIMIT", 1]]
+Completed 200 OK in 108ms (Views: 1.5ms | ActiveRecord: 39.2ms)
+
+
+  [1m[36mProject Load (45.5ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+Completed 200 OK in 116ms (Views: 6.9ms | ActiveRecord: 48.3ms)
+
+
+  [1m[36mUser Load (40.0ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+Completed 200 OK in 123ms (Views: 7.9ms | ActiveRecord: 48.0ms)
+
+
+Started GET "/api/v1/projects" for 127.0.0.1 at 2017-09-22 11:52:12 -0400
+Started GET "/api/v1/users" for 127.0.0.1 at 2017-09-22 11:52:12 -0400
+Processing by Api::V1::ProjectsController#index as JSON
+Processing by Api::V1::UsersController#index as JSON
+  Parameters: {"user"=>{}}
+  Parameters: {"project"=>{}}
+Started GET "/api/v1/users/10" for 127.0.0.1 at 2017-09-22 11:52:12 -0400
+Processing by Api::V1::UsersController#show as JSON
+  Parameters: {"id"=>"10", "user"=>{}}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 10], ["LIMIT", 1]]
+  [1m[36mUser Load (4.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 10], ["LIMIT", 1]]
+  [1m[36mUser Load (2.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+Completed 200 OK in 19ms (Views: 6.6ms | ActiveRecord: 6.3ms)
+
+
+  [1m[36mUser Load (14.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 10], ["LIMIT", 1]]
+  [1m[36mUser Load (11.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 10], ["LIMIT", 1]]
+Completed 200 OK in 21ms (Views: 1.6ms | ActiveRecord: 12.0ms)
+
+
+  [1m[36mProject Load (8.6ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+Completed 200 OK in 40ms (Views: 9.5ms | ActiveRecord: 23.3ms)
+
+
+Started GET "/api/v1/projects" for 127.0.0.1 at 2017-09-22 11:53:11 -0400
+Started GET "/api/v1/users" for 127.0.0.1 at 2017-09-22 11:53:11 -0400
+Processing by Api::V1::ProjectsController#index as JSON
+  Parameters: {"project"=>{}}
+Processing by Api::V1::UsersController#index as JSON
+  Parameters: {"user"=>{}}
+Started GET "/api/v1/users/10" for 127.0.0.1 at 2017-09-22 11:53:11 -0400
+Processing by Api::V1::UsersController#show as JSON
+  Parameters: {"id"=>"10", "user"=>{}}
+  [1m[36mUser Load (8.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 10], ["LIMIT", 1]]
+  [1m[36mUser Load (9.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 10], ["LIMIT", 1]]
+  [1m[36mUser Load (14.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 10], ["LIMIT", 1]]
+  [1m[36mUser Load (11.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 10], ["LIMIT", 1]]
+Completed 200 OK in 92ms (Views: 5.7ms | ActiveRecord: 20.3ms)
+
+
+  [1m[36mUser Load (11.7ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+Completed 200 OK in 155ms (Views: 6.8ms | ActiveRecord: 25.8ms)
+
+
+  [1m[36mProject Load (21.7ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+Completed 200 OK in 173ms (Views: 12.9ms | ActiveRecord: 31.6ms)
+
+
+Started GET "/api/v1/users/10" for 127.0.0.1 at 2017-09-22 11:55:25 -0400
+Processing by Api::V1::UsersController#show as JSON
+  Parameters: {"id"=>"10", "user"=>{}}
+Started GET "/api/v1/projects" for 127.0.0.1 at 2017-09-22 11:55:25 -0400
+Processing by Api::V1::ProjectsController#index as JSON
+  Parameters: {"project"=>{}}
+Started GET "/api/v1/users" for 127.0.0.1 at 2017-09-22 11:55:26 -0400
+Processing by Api::V1::UsersController#index as JSON
+  Parameters: {"user"=>{}}
+  [1m[36mUser Load (13.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 10], ["LIMIT", 1]]
+  [1m[36mUser Load (22.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 10], ["LIMIT", 1]]
+  [1m[36mUser Load (22.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[36mUser Load (24.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 10], ["LIMIT", 1]]
+Completed 200 OK in 175ms (Views: 2.0ms | ActiveRecord: 47.2ms)
+
+
+Completed 200 OK in 104ms (Views: 24.5ms | ActiveRecord: 36.0ms)
+
+
+  [1m[36mUser Load (16.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 10], ["LIMIT", 1]]
+  [1m[36mProject Load (0.9ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+Completed 200 OK in 214ms (Views: 5.5ms | ActiveRecord: 17.0ms)
+
+
+Started GET "/api/v1/projects" for 127.0.0.1 at 2017-09-22 11:55:42 -0400
+Processing by Api::V1::ProjectsController#index as JSON
+Started GET "/api/v1/users" for 127.0.0.1 at 2017-09-22 11:55:42 -0400
+  Parameters: {"project"=>{}}
+Started GET "/api/v1/users/10" for 127.0.0.1 at 2017-09-22 11:55:42 -0400
+Processing by Api::V1::UsersController#index as JSON
+Processing by Api::V1::UsersController#show as JSON
+  Parameters: {"id"=>"10", "user"=>{}}
+  Parameters: {"user"=>{}}
+  [1m[36mUser Load (6.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 10], ["LIMIT", 1]]
+  [1m[36mProject Load (30.6ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+Completed 200 OK in 62ms (Views: 17.0ms | ActiveRecord: 37.5ms)
+
+
+  [1m[36mUser Load (3.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 10], ["LIMIT", 1]]
+  [1m[36mUser Load (6.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 10], ["LIMIT", 1]]
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 10], ["LIMIT", 1]]
+Completed 200 OK in 102ms (Views: 11.8ms | ActiveRecord: 10.7ms)
+
+
+  [1m[36mUser Load (8.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+Completed 200 OK in 109ms (Views: 6.8ms | ActiveRecord: 9.4ms)
+
+
+Started GET "/api/v1/users" for 127.0.0.1 at 2017-09-22 12:02:21 -0400
+Started GET "/api/v1/projects" for 127.0.0.1 at 2017-09-22 12:02:21 -0400
+Processing by Api::V1::ProjectsController#index as JSON
+  Parameters: {"project"=>{}}
+Started GET "/api/v1/users/10" for 127.0.0.1 at 2017-09-22 12:02:21 -0400
+Processing by Api::V1::UsersController#index as JSON
+Processing by Api::V1::UsersController#show as JSON
+  Parameters: {"user"=>{}}
+  Parameters: {"id"=>"10", "user"=>{}}
+  [1m[36mUser Load (84.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 10], ["LIMIT", 1]]
+  [1m[36mUser Load (80.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 10], ["LIMIT", 1]]
+  [1m[36mUser Load (17.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 10], ["LIMIT", 1]]
+  [1m[36mProject Load (3.2ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+Completed 200 OK in 296ms (Views: 16.0ms | ActiveRecord: 83.4ms)
+
+
+  [1m[36mUser Load (22.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[36mUser Load (16.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 10], ["LIMIT", 1]]
+Completed 200 OK in 312ms (Views: 35.4ms | ActiveRecord: 106.3ms)
+
+
+Completed 200 OK in 314ms (Views: 2.0ms | ActiveRecord: 33.9ms)
+
+
+Started GET "/api/v1/projects" for 127.0.0.1 at 2017-09-22 12:02:40 -0400
+Processing by Api::V1::ProjectsController#index as JSON
+  Parameters: {"project"=>{}}
+Started GET "/api/v1/users" for 127.0.0.1 at 2017-09-22 12:02:40 -0400
+Processing by Api::V1::UsersController#index as JSON
+Started GET "/api/v1/users/10" for 127.0.0.1 at 2017-09-22 12:02:40 -0400
+  Parameters: {"user"=>{}}
+Processing by Api::V1::UsersController#show as JSON
+  Parameters: {"id"=>"10", "user"=>{}}
+  [1m[36mUser Load (4.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 10], ["LIMIT", 1]]
+  [1m[36mProject Load (1.5ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+Completed 200 OK in 29ms (Views: 8.0ms | ActiveRecord: 6.4ms)
+
+
+  [1m[36mUser Load (7.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 10], ["LIMIT", 1]]
+  [1m[36mUser Load (21.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 10], ["LIMIT", 1]]
+  [1m[36mUser Load (8.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 10], ["LIMIT", 1]]
+  [1m[36mUser Load (33.6ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+Completed 200 OK in 85ms (Views: 2.3ms | ActiveRecord: 30.4ms)
+
+
+Completed 200 OK in 94ms (Views: 9.6ms | ActiveRecord: 40.5ms)
+
+
+Started GET "/api/v1/projects" for 127.0.0.1 at 2017-09-22 12:03:51 -0400
+Processing by Api::V1::ProjectsController#index as JSON
+  Parameters: {"project"=>{}}
+Started GET "/api/v1/users" for 127.0.0.1 at 2017-09-22 12:03:51 -0400
+Processing by Api::V1::UsersController#index as JSON
+  Parameters: {"user"=>{}}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 10], ["LIMIT", 1]]
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 10], ["LIMIT", 1]]
+  [1m[36mProject Load (47.4ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+Completed 200 OK in 196ms (Views: 8.9ms | ActiveRecord: 48.1ms)
+
+
+  [1m[36mUser Load (56.8ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+Completed 200 OK in 212ms (Views: 28.6ms | ActiveRecord: 57.4ms)
+
+
+Started GET "/api/v1/users/10" for 127.0.0.1 at 2017-09-22 12:03:51 -0400
+Processing by Api::V1::UsersController#show as JSON
+  Parameters: {"id"=>"10", "user"=>{}}
+  [1m[36mUser Load (1.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 10], ["LIMIT", 1]]
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 10], ["LIMIT", 1]]
+Completed 200 OK in 10ms (Views: 2.0ms | ActiveRecord: 2.2ms)
+
+
+Started GET "/api/v1/projects" for 127.0.0.1 at 2017-09-22 12:04:18 -0400
+Started GET "/api/v1/users" for 127.0.0.1 at 2017-09-22 12:04:18 -0400
+Started GET "/api/v1/users/10" for 127.0.0.1 at 2017-09-22 12:04:18 -0400
+Processing by Api::V1::ProjectsController#index as JSON
+Processing by Api::V1::UsersController#index as JSON
+Processing by Api::V1::UsersController#show as JSON
+  Parameters: {"id"=>"10", "user"=>{}}
+  Parameters: {"user"=>{}}
+  Parameters: {"project"=>{}}
+  [1m[36mUser Load (73.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 10], ["LIMIT", 1]]
+  [1m[36mUser Load (87.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 10], ["LIMIT", 1]]
+  [1m[36mUser Load (17.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 10], ["LIMIT", 1]]
+Completed 200 OK in 158ms (Views: 6.7ms | ActiveRecord: 91.5ms)
+
+
+  [1m[36mUser Load (16.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[36mUser Load (39.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 10], ["LIMIT", 1]]
+Completed 200 OK in 158ms (Views: 16.4ms | ActiveRecord: 104.1ms)
+
+
+  [1m[36mProject Load (1.2ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+Completed 200 OK in 188ms (Views: 26.9ms | ActiveRecord: 40.8ms)
+
+
+Started GET "/api/v1/projects" for 127.0.0.1 at 2017-09-22 12:04:41 -0400
+Started GET "/api/v1/users" for 127.0.0.1 at 2017-09-22 12:04:41 -0400
+Processing by Api::V1::UsersController#index as JSON
+  Parameters: {"user"=>{}}
+Started GET "/api/v1/users/10" for 127.0.0.1 at 2017-09-22 12:04:41 -0400
+Processing by Api::V1::ProjectsController#index as JSON
+  Parameters: {"project"=>{}}
+Processing by Api::V1::UsersController#show as JSON
+  Parameters: {"id"=>"10", "user"=>{}}
+  [1m[36mUser Load (8.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 10], ["LIMIT", 1]]
+  [1m[36mUser Load (17.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 10], ["LIMIT", 1]]
+  [1m[36mUser Load (3.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 10], ["LIMIT", 1]]
+Completed 200 OK in 208ms (Views: 1.0ms | ActiveRecord: 20.9ms)
+
+
+  [1m[36mUser Load (15.0ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+Completed 200 OK in 229ms (Views: 6.9ms | ActiveRecord: 23.3ms)
+
+
+  [1m[36mUser Load (15.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 10], ["LIMIT", 1]]
+  [1m[36mProject Load (5.6ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+Completed 200 OK in 242ms (Views: 6.2ms | ActiveRecord: 21.2ms)
+
+
+Started GET "/api/v1/users/10" for 127.0.0.1 at 2017-09-22 12:07:48 -0400
+Processing by Api::V1::UsersController#show as JSON
+  Parameters: {"id"=>"10", "user"=>{}}
+  [1m[36mUser Load (3.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 10], ["LIMIT", 1]]
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 10], ["LIMIT", 1]]
+Completed 200 OK in 61ms (Views: 16.3ms | ActiveRecord: 4.2ms)
+
+
+Started GET "/api/v1/projects" for 127.0.0.1 at 2017-09-22 12:07:49 -0400
+Processing by Api::V1::ProjectsController#index as JSON
+  Parameters: {"project"=>{}}
+Started GET "/api/v1/users" for 127.0.0.1 at 2017-09-22 12:07:49 -0400
+Processing by Api::V1::UsersController#index as JSON
+  Parameters: {"user"=>{}}
+  [1m[36mUser Load (9.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 10], ["LIMIT", 1]]
+  [1m[36mProject Load (32.0ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  [1m[36mUser Load (31.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 10], ["LIMIT", 1]]
+Completed 200 OK in 173ms (Views: 20.3ms | ActiveRecord: 41.1ms)
+
+
+  [1m[36mUser Load (7.0ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+Completed 200 OK in 170ms (Views: 7.5ms | ActiveRecord: 38.9ms)
+
+
+  [1m[36mUser Load (5.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" LIMIT $1[0m  [["LIMIT", 11]]
+Started POST "/api/v1/users" for 127.0.0.1 at 2017-09-22 13:31:17 -0400
+Processing by Api::V1::UsersController#create as JSON
+  Parameters: {"user"=>{"first_name"=>"Prince", "last_name"=>"Nelson", "email"=>"prince@email.com", "password"=>"[FILTERED]", "role"=>"engineer", "bio"=>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi"}}
+  [1m[35m (12.6ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (68.6ms)[0m  [1m[32mINSERT INTO "users" ("first_name", "last_name", "password_digest", "bio", "role", "email", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["first_name", "Prince"], ["last_name", "Nelson"], ["password_digest", "$2a$10$6Oxmjdhx00aiwaUTZsbviegCG9fCIdDtYtPCzYJGWHcUoV68THuKm"], ["bio", "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi"], ["role", "engineer"], ["email", "prince@email.com"], ["created_at", "2017-09-22 17:31:17.509983"], ["updated_at", "2017-09-22 17:31:17.509983"]]
+  [1m[35m (3.2ms)[0m  [1m[35mCOMMIT[0m
+Completed 200 OK in 274ms (Views: 4.2ms | ActiveRecord: 84.3ms)
+
+
+Started GET "/api/v1/users" for 127.0.0.1 at 2017-09-22 13:31:17 -0400
+Processing by Api::V1::UsersController#index as JSON
+  Parameters: {"user"=>{}}
+Started GET "/api/v1/users/11" for 127.0.0.1 at 2017-09-22 13:31:17 -0400
+Processing by Api::V1::UsersController#show as JSON
+  Parameters: {"id"=>"11", "user"=>{}}
+Started GET "/api/v1/projects" for 127.0.0.1 at 2017-09-22 13:31:17 -0400
+  [1m[36mUser Load (2.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 11], ["LIMIT", 1]]
+Processing by Api::V1::ProjectsController#index as JSON
+  Parameters: {"project"=>{}}
+  [1m[36mUser Load (9.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 11], ["LIMIT", 1]]
+  [1m[36mUser Load (5.7ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+Completed 200 OK in 45ms (Views: 11.8ms | ActiveRecord: 7.8ms)
+
+
+  [1m[36mUser Load (11.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 11], ["LIMIT", 1]]
+Completed 200 OK in 35ms (Views: 1.9ms | ActiveRecord: 20.9ms)
+
+
+  [1m[36mUser Load (7.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 11], ["LIMIT", 1]]
+  [1m[36mProject Load (10.8ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+Completed 200 OK in 63ms (Views: 28.8ms | ActiveRecord: 18.3ms)
+
+
+  [1m[36mUser Load (5.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" LIMIT $1[0m  [["LIMIT", 11]]
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (12.2ms)[0m  [1m[33mUPDATE "users" SET "updated_at" = $1, "user_image" = $2 WHERE "users"."id" = $3[0m  [["updated_at", "2017-09-22 17:33:18.023409"], ["user_image", "prince.jpg"], ["id", 11]]
+  [1m[35m (1.7ms)[0m  [1m[35mCOMMIT[0m
+Started POST "/api/v1/users" for 127.0.0.1 at 2017-09-22 13:34:04 -0400
+Processing by Api::V1::UsersController#create as JSON
+  Parameters: {"user"=>{"first_name"=>"Barack", "last_name"=>"Obama", "email"=>"barack@email.com", "password"=>"[FILTERED]", "role"=>"visionary", "bio"=>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi"}}
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (11.3ms)[0m  [1m[32mINSERT INTO "users" ("first_name", "last_name", "password_digest", "bio", "role", "email", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["first_name", "Barack"], ["last_name", "Obama"], ["password_digest", "$2a$10$hggGFQjH4joerPRLYhVBI.xsyyERe.0PVKhzkWZIaxv27quz33z9K"], ["bio", "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi"], ["role", "visionary"], ["email", "barack@email.com"], ["created_at", "2017-09-22 17:34:04.418114"], ["updated_at", "2017-09-22 17:34:04.418114"]]
+  [1m[35m (1.6ms)[0m  [1m[35mCOMMIT[0m
+Completed 200 OK in 121ms (Views: 4.3ms | ActiveRecord: 13.4ms)
+
+
+Started GET "/api/v1/users" for 127.0.0.1 at 2017-09-22 13:34:04 -0400
+Processing by Api::V1::UsersController#index as JSON
+  Parameters: {"user"=>{}}
+Started GET "/api/v1/projects" for 127.0.0.1 at 2017-09-22 13:34:04 -0400
+Processing by Api::V1::ProjectsController#index as JSON
+  Parameters: {"project"=>{}}
+Started GET "/api/v1/users/12" for 127.0.0.1 at 2017-09-22 13:34:04 -0400
+Processing by Api::V1::UsersController#show as JSON
+  Parameters: {"id"=>"12", "user"=>{}}
+  [1m[36mUser Load (35.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 12], ["LIMIT", 1]]
+  [1m[36mProject Load (1.7ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+Completed 200 OK in 119ms (Views: 13.6ms | ActiveRecord: 36.9ms)
+
+
+  [1m[36mUser Load (18.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 12], ["LIMIT", 1]]
+  [1m[36mUser Load (13.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 12], ["LIMIT", 1]]
+  [1m[36mUser Load (35.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 12], ["LIMIT", 1]]
+Completed 200 OK in 71ms (Views: 1.4ms | ActiveRecord: 49.2ms)
+
+
+  [1m[36mUser Load (41.8ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+Completed 200 OK in 214ms (Views: 11.2ms | ActiveRecord: 60.5ms)
+
+
+Started POST "/api/v1/users" for 127.0.0.1 at 2017-09-22 13:34:43 -0400
+Processing by Api::V1::UsersController#create as JSON
+  Parameters: {"user"=>{"first_name"=>"Bill", "last_name"=>"Murray", "email"=>"bill@email.com", "password"=>"[FILTERED]", "role"=>"visionary", "bio"=>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi."}}
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (3.8ms)[0m  [1m[32mINSERT INTO "users" ("first_name", "last_name", "password_digest", "bio", "role", "email", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["first_name", "Bill"], ["last_name", "Murray"], ["password_digest", "$2a$10$qLwexMt4Oc5D7/wiuBobR.D.bzlUZaaFsJoBKILel552mO1r.RT2m"], ["bio", "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi."], ["role", "visionary"], ["email", "bill@email.com"], ["created_at", "2017-09-22 17:34:43.907344"], ["updated_at", "2017-09-22 17:34:43.907344"]]
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+Completed 200 OK in 91ms (Views: 0.9ms | ActiveRecord: 4.8ms)
+
+
+Started GET "/api/v1/users" for 127.0.0.1 at 2017-09-22 13:34:43 -0400
+Processing by Api::V1::UsersController#index as JSON
+  Parameters: {"user"=>{}}
+Started GET "/api/v1/projects" for 127.0.0.1 at 2017-09-22 13:34:43 -0400
+Processing by Api::V1::ProjectsController#index as JSON
+  Parameters: {"project"=>{}}
+Started GET "/api/v1/users/13" for 127.0.0.1 at 2017-09-22 13:34:44 -0400
+Processing by Api::V1::UsersController#show as JSON
+  Parameters: {"id"=>"13", "user"=>{}}
+  [1m[36mUser Load (62.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 13], ["LIMIT", 1]]
+  [1m[36mUser Load (60.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 13], ["LIMIT", 1]]
+  [1m[36mUser Load (2.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+Completed 200 OK in 100ms (Views: 10.1ms | ActiveRecord: 64.9ms)
+
+
+  [1m[36mUser Load (11.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 13], ["LIMIT", 1]]
+  [1m[36mProject Load (10.7ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+Completed 200 OK in 97ms (Views: 8.1ms | ActiveRecord: 71.6ms)
+
+
+  [1m[36mUser Load (7.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 13], ["LIMIT", 1]]
+Completed 200 OK in 34ms (Views: 1.4ms | ActiveRecord: 19.1ms)
+
+
+Started POST "/api/v1/users" for 127.0.0.1 at 2017-09-22 13:35:30 -0400
+Processing by Api::V1::UsersController#create as JSON
+  Parameters: {"user"=>{"first_name"=>"Mark", "last_name"=>"Zuckerberg", "email"=>"mark@email.com", "password"=>"[FILTERED]", "role"=>"engineer", "bio"=>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi."}}
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (1.0ms)[0m  [1m[32mINSERT INTO "users" ("first_name", "last_name", "password_digest", "bio", "role", "email", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["first_name", "Mark"], ["last_name", "Zuckerberg"], ["password_digest", "$2a$10$0KbgXld2Orpmo2uniH98g.MIa/p8ktgkeuM7usTotxklFlzjUU4Ci"], ["bio", "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi."], ["role", "engineer"], ["email", "mark@email.com"], ["created_at", "2017-09-22 17:35:30.235507"], ["updated_at", "2017-09-22 17:35:30.235507"]]
+  [1m[35m (7.8ms)[0m  [1m[35mCOMMIT[0m
+Completed 200 OK in 119ms (Views: 6.4ms | ActiveRecord: 9.3ms)
+
+
+Started GET "/api/v1/projects" for 127.0.0.1 at 2017-09-22 13:35:30 -0400
+Started GET "/api/v1/users" for 127.0.0.1 at 2017-09-22 13:35:30 -0400
+Processing by Api::V1::ProjectsController#index as JSON
+Processing by Api::V1::UsersController#index as JSON
+  Parameters: {"user"=>{}}
+  Parameters: {"project"=>{}}
+Started GET "/api/v1/users/14" for 127.0.0.1 at 2017-09-22 13:35:30 -0400
+Processing by Api::V1::UsersController#show as JSON
+  Parameters: {"id"=>"14", "user"=>{}}
+  [1m[36mUser Load (1.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 14], ["LIMIT", 1]]
+  [1m[36mUser Load (8.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 14], ["LIMIT", 1]]
+  [1m[36mProject Load (2.3ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+Completed 200 OK in 50ms (Views: 8.0ms | ActiveRecord: 10.6ms)
+
+
+  [1m[36mUser Load (9.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 14], ["LIMIT", 1]]
+  [1m[36mUser Load (13.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+Completed 200 OK in 66ms (Views: 15.8ms | ActiveRecord: 14.7ms)
+
+
+  [1m[36mUser Load (17.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 14], ["LIMIT", 1]]
+Completed 200 OK in 54ms (Views: 6.2ms | ActiveRecord: 26.4ms)
+
+
+Started POST "/api/v1/users" for 127.0.0.1 at 2017-09-22 13:36:21 -0400
+Processing by Api::V1::UsersController#create as JSON
+  Parameters: {"user"=>{"first_name"=>"Neil", "last_name"=>"Degrasse Tyson", "email"=>"neil@email.com", "password"=>"[FILTERED]", "role"=>"engineer", "bio"=>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi."}}
+  [1m[35m (0.7ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (6.5ms)[0m  [1m[31mROLLBACK[0m
+Completed 204 No Content in 48ms (ActiveRecord: 7.2ms)
+
+
+  [1m[36mUser Load (2.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" LIMIT $1[0m  [["LIMIT", 11]]
+  [1m[36mUser Load (1.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.7ms)[0m  [1m[33mUPDATE "users" SET "updated_at" = $1, "user_image" = $2 WHERE "users"."id" = $3[0m  [["updated_at", "2017-09-22 17:38:36.283731"], ["user_image", "mark.jpg"], ["id", 14]]
+  [1m[35m (6.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", nil], ["LIMIT", 1]]
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 12], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (1.0ms)[0m  [1m[33mUPDATE "users" SET "updated_at" = $1, "user_image" = $2 WHERE "users"."id" = $3[0m  [["updated_at", "2017-09-22 17:39:42.705067"], ["user_image", "barack.jpg"], ["id", 12]]
+  [1m[35m (6.0ms)[0m  [1m[35mCOMMIT[0m
+Started POST "/api/v1/users" for 127.0.0.1 at 2017-09-22 13:40:26 -0400
+Processing by Api::V1::UsersController#create as JSON
+  Parameters: {"user"=>{"first_name"=>"Neil", "last_name"=>"Degrasse", "email"=>"neil@email.com", "password"=>"[FILTERED]", "role"=>"engineer", "bio"=>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi"}}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (1.1ms)[0m  [1m[32mINSERT INTO "users" ("first_name", "last_name", "password_digest", "bio", "role", "email", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["first_name", "Neil"], ["last_name", "Degrasse"], ["password_digest", "$2a$10$I8I0vHGa5WPWdfNheS.i3OqhbN9aG/gND347k0JSsjN3YD3NfOf8."], ["bio", "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi"], ["role", "engineer"], ["email", "neil@email.com"], ["created_at", "2017-09-22 17:40:26.253894"], ["updated_at", "2017-09-22 17:40:26.253894"]]
+  [1m[35m (8.5ms)[0m  [1m[35mCOMMIT[0m
+Completed 200 OK in 110ms (Views: 3.0ms | ActiveRecord: 9.8ms)
+
+
+Started GET "/api/v1/users" for 127.0.0.1 at 2017-09-22 13:40:26 -0400
+Processing by Api::V1::UsersController#index as JSON
+  Parameters: {"user"=>{}}
+Started GET "/api/v1/projects" for 127.0.0.1 at 2017-09-22 13:40:26 -0400
+Processing by Api::V1::ProjectsController#index as JSON
+  Parameters: {"project"=>{}}
+Started GET "/api/v1/users/15" for 127.0.0.1 at 2017-09-22 13:40:26 -0400
+Processing by Api::V1::UsersController#show as JSON
+  [1m[36mUser Load (9.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 15], ["LIMIT", 1]]
+  Parameters: {"id"=>"15", "user"=>{}}
+  [1m[36mUser Load (19.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 15], ["LIMIT", 1]]
+  [1m[36mUser Load (4.5ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+Completed 200 OK in 189ms (Views: 8.8ms | ActiveRecord: 13.7ms)
+
+
+  [1m[36mUser Load (8.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 15], ["LIMIT", 1]]
+  [1m[36mProject Load (12.3ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+Completed 200 OK in 167ms (Views: 9.4ms | ActiveRecord: 31.9ms)
+
+
+  [1m[36mUser Load (9.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 15], ["LIMIT", 1]]
+Completed 200 OK in 28ms (Views: 1.3ms | ActiveRecord: 18.0ms)
+
+
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (1.1ms)[0m  [1m[33mUPDATE "users" SET "updated_at" = $1, "user_image" = $2 WHERE "users"."id" = $3[0m  [["updated_at", "2017-09-22 17:41:18.856857"], ["user_image", "neil.jpg"], ["id", 15]]
+  [1m[35m (5.9ms)[0m  [1m[35mCOMMIT[0m
+Started POST "/api/v1/users" for 127.0.0.1 at 2017-09-22 13:42:09 -0400
+Processing by Api::V1::UsersController#create as JSON
+  Parameters: {"user"=>{"first_name"=>"Stevie", "last_name"=>"Wonder", "email"=>"stevie@email.com", "password"=>"[FILTERED]", "role"=>"designer", "bio"=>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi"}}
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (1.1ms)[0m  [1m[32mINSERT INTO "users" ("first_name", "last_name", "password_digest", "bio", "role", "email", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["first_name", "Stevie"], ["last_name", "Wonder"], ["password_digest", "$2a$10$GgvSlr2BsbnH8F.26u1hV.Fw1fF/2S1qyOa3LL4m8P04IR1O5Zad6"], ["bio", "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi"], ["role", "designer"], ["email", "stevie@email.com"], ["created_at", "2017-09-22 17:42:09.780106"], ["updated_at", "2017-09-22 17:42:09.780106"]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+Completed 200 OK in 87ms (Views: 0.6ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/api/v1/users/16" for 127.0.0.1 at 2017-09-22 13:42:09 -0400
+Processing by Api::V1::UsersController#show as JSON
+  Parameters: {"id"=>"16", "user"=>{}}
+Started GET "/api/v1/projects" for 127.0.0.1 at 2017-09-22 13:42:09 -0400
+Processing by Api::V1::ProjectsController#index as JSON
+  Parameters: {"project"=>{}}
+Started GET "/api/v1/users" for 127.0.0.1 at 2017-09-22 13:42:09 -0400
+Processing by Api::V1::UsersController#index as JSON
+  [1m[36mUser Load (3.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 16], ["LIMIT", 1]]
+  [1m[36mUser Load (3.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 16], ["LIMIT", 1]]
+  Parameters: {"user"=>{}}
+  [1m[36mUser Load (1.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 16], ["LIMIT", 1]]
+Completed 200 OK in 20ms (Views: 1.1ms | ActiveRecord: 5.3ms)
+
+
+  [1m[36mProject Load (3.7ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+Completed 200 OK in 22ms (Views: 8.2ms | ActiveRecord: 7.5ms)
+
+
+  [1m[36mUser Load (8.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 16], ["LIMIT", 1]]
+  [1m[36mUser Load (10.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+Completed 200 OK in 45ms (Views: 17.8ms | ActiveRecord: 18.7ms)
+
+
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (1.1ms)[0m  [1m[33mUPDATE "users" SET "updated_at" = $1, "user_image" = $2 WHERE "users"."id" = $3[0m  [["updated_at", "2017-09-22 17:42:48.606641"], ["user_image", "stevie.jpg"], ["id", 16]]
+  [1m[35m (6.1ms)[0m  [1m[35mCOMMIT[0m
+Started POST "/api/v1/users" for 127.0.0.1 at 2017-09-22 13:43:35 -0400
+Processing by Api::V1::UsersController#create as JSON
+  Parameters: {"user"=>{"first_name"=>"Denzel", "last_name"=>"Washington", "email"=>"denzel@email.com", "password"=>"[FILTERED]", "role"=>"designer", "bio"=>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi"}}
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.9ms)[0m  [1m[32mINSERT INTO "users" ("first_name", "last_name", "password_digest", "bio", "role", "email", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["first_name", "Denzel"], ["last_name", "Washington"], ["password_digest", "$2a$10$2hEnLjiGWkVR5grQDfkgMuLWw/sQlpOqCtJhox1EINzr1g9JZwf9K"], ["bio", "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi"], ["role", "designer"], ["email", "denzel@email.com"], ["created_at", "2017-09-22 17:43:35.145810"], ["updated_at", "2017-09-22 17:43:35.145810"]]
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+Completed 200 OK in 85ms (Views: 0.8ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/api/v1/projects" for 127.0.0.1 at 2017-09-22 13:43:35 -0400
+Processing by Api::V1::ProjectsController#index as JSON
+  Parameters: {"project"=>{}}
+Started GET "/api/v1/users" for 127.0.0.1 at 2017-09-22 13:43:35 -0400
+Processing by Api::V1::UsersController#index as JSON
+  Parameters: {"user"=>{}}
+Started GET "/api/v1/users/17" for 127.0.0.1 at 2017-09-22 13:43:35 -0400
+Processing by Api::V1::UsersController#show as JSON
+  Parameters: {"id"=>"17", "user"=>{}}
+  [1m[36mUser Load (29.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 17], ["LIMIT", 1]]
+  [1m[36mUser Load (2.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 17], ["LIMIT", 1]]
+  [1m[36mProject Load (3.4ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+Completed 200 OK in 103ms (Views: 19.2ms | ActiveRecord: 32.5ms)
+
+
+  [1m[36mUser Load (23.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 17], ["LIMIT", 1]]
+  [1m[36mUser Load (24.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+Completed 200 OK in 121ms (Views: 23.6ms | ActiveRecord: 26.4ms)
+
+
+  [1m[36mUser Load (24.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 17], ["LIMIT", 1]]
+Completed 200 OK in 106ms (Views: 1.2ms | ActiveRecord: 47.2ms)
+
+
+Started POST "/api/v1/login" for 127.0.0.1 at 2017-09-22 13:47:02 -0400
+Processing by Api::V1::AuthController#create as JSON
+  Parameters: {"email"=>"stevie@email.com", "password"=>"[FILTERED]", "auth"=>{"email"=>"stevie@email.com", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (3.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "stevie@email.com"], ["LIMIT", 1]]
+Completed 200 OK in 141ms (Views: 4.3ms | ActiveRecord: 3.2ms)
+
+
+Started GET "/api/v1/users" for 127.0.0.1 at 2017-09-22 13:47:02 -0400
+Processing by Api::V1::UsersController#index as JSON
+  Parameters: {"user"=>{}}
+Started GET "/api/v1/projects" for 127.0.0.1 at 2017-09-22 13:47:03 -0400
+Processing by Api::V1::ProjectsController#index as JSON
+  Parameters: {"project"=>{}}
+  [1m[36mUser Load (1.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 16], ["LIMIT", 1]]
+  [1m[36mUser Load (3.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 16], ["LIMIT", 1]]
+  [1m[36mUser Load (2.7ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[36mProject Load (23.8ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+Completed 200 OK in 87ms (Views: 55.2ms | ActiveRecord: 27.2ms)
+
+
+Completed 200 OK in 126ms (Views: 82.3ms | ActiveRecord: 4.4ms)
+
+
+Started GET "/api/v1/users/16" for 127.0.0.1 at 2017-09-22 13:47:03 -0400
+Processing by Api::V1::UsersController#show as JSON
+  Parameters: {"id"=>"16", "user"=>{}}
+  [1m[36mUser Load (11.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 16], ["LIMIT", 1]]
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 16], ["LIMIT", 1]]
+Completed 200 OK in 36ms (Views: 3.0ms | ActiveRecord: 12.3ms)
+
+
+Started GET "/api/v1/projects" for 127.0.0.1 at 2017-09-22 13:49:20 -0400
+Processing by Api::V1::ProjectsController#index as JSON
+  Parameters: {"project"=>{}}
+Started GET "/api/v1/users/16" for 127.0.0.1 at 2017-09-22 13:49:21 -0400
+Processing by Api::V1::UsersController#show as JSON
+  Parameters: {"id"=>"16", "user"=>{}}
+Started GET "/api/v1/users" for 127.0.0.1 at 2017-09-22 13:49:21 -0400
+Processing by Api::V1::UsersController#index as JSON
+  Parameters: {"user"=>{}}
+  [1m[36mUser Load (3.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 16], ["LIMIT", 1]]
+  [1m[36mUser Load (29.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 16], ["LIMIT", 1]]
+  [1m[36mUser Load (24.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 16], ["LIMIT", 1]]
+  [1m[36mProject Load (2.4ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+Completed 200 OK in 182ms (Views: 42.0ms | ActiveRecord: 5.4ms)
+
+
+  [1m[36mUser Load (31.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 16], ["LIMIT", 1]]
+Completed 200 OK in 86ms (Views: 1.9ms | ActiveRecord: 60.8ms)
+
+
+  [1m[36mUser Load (110.9ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+Completed 200 OK in 177ms (Views: 23.9ms | ActiveRecord: 135.5ms)
+
+
+Started GET "/api/v1/projects" for 127.0.0.1 at 2017-09-22 13:51:00 -0400
+Processing by Api::V1::ProjectsController#index as JSON
+  Parameters: {"project"=>{}}
+Started GET "/api/v1/users" for 127.0.0.1 at 2017-09-22 13:51:00 -0400
+Processing by Api::V1::UsersController#index as JSON
+  Parameters: {"user"=>{}}
+Started GET "/api/v1/users/16" for 127.0.0.1 at 2017-09-22 13:51:00 -0400
+Processing by Api::V1::UsersController#show as JSON
+  Parameters: {"id"=>"16", "user"=>{}}
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 16], ["LIMIT", 1]]
+  [1m[36mUser Load (8.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 16], ["LIMIT", 1]]
+  [1m[36mUser Load (4.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 16], ["LIMIT", 1]]
+  [1m[36mProject Load (29.5ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+Completed 200 OK in 82ms (Views: 16.2ms | ActiveRecord: 30.7ms)
+
+
+  [1m[36mUser Load (19.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 16], ["LIMIT", 1]]
+Completed 200 OK in 56ms (Views: 1.1ms | ActiveRecord: 27.7ms)
+
+
+  [1m[36mUser Load (68.0ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+Completed 200 OK in 171ms (Views: 54.1ms | ActiveRecord: 72.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-09-22 13:51:04 -0400
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /Users/flatironschool/.rvm/gems/ruby-2.3.3/gems/railties-5.1.4/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/flatironschool/.rvm/gems/ruby-2.3.3/gems/railties-5.1.4/lib/rails/templates/rails/welcome/index.html.erb (18.3ms)
+Completed 200 OK in 61ms (Views: 46.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-09-22 13:51:14 -0400
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /Users/flatironschool/.rvm/gems/ruby-2.3.3/gems/railties-5.1.4/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/flatironschool/.rvm/gems/ruby-2.3.3/gems/railties-5.1.4/lib/rails/templates/rails/welcome/index.html.erb (6.0ms)
+Completed 200 OK in 12ms (Views: 8.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/goals" for 127.0.0.1 at 2017-09-22 13:52:18 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/goals"):
+  
+actionpack (5.1.4) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.4) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.4) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+rack-cors (1.0.1) lib/rack/cors.rb:93:in `call'
+railties (5.1.4) lib/rails/engine.rb:522:in `call'
+puma (3.10.0) lib/puma/configuration.rb:225:in `call'
+puma (3.10.0) lib/puma/server.rb:605:in `handle_request'
+puma (3.10.0) lib/puma/server.rb:437:in `process_client'
+puma (3.10.0) lib/puma/server.rb:301:in `block in run'
+puma (3.10.0) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/api/v1" for 127.0.0.1 at 2017-09-22 13:52:37 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/api/v1"):
+  
+actionpack (5.1.4) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.4) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.4) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+rack-cors (1.0.1) lib/rack/cors.rb:93:in `call'
+railties (5.1.4) lib/rails/engine.rb:522:in `call'
+puma (3.10.0) lib/puma/configuration.rb:225:in `call'
+puma (3.10.0) lib/puma/server.rb:605:in `handle_request'
+puma (3.10.0) lib/puma/server.rb:437:in `process_client'
+puma (3.10.0) lib/puma/server.rb:301:in `block in run'
+puma (3.10.0) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/api/v1/" for 127.0.0.1 at 2017-09-22 13:52:46 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/api/v1"):
+  
+actionpack (5.1.4) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.4) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.4) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+rack-cors (1.0.1) lib/rack/cors.rb:93:in `call'
+railties (5.1.4) lib/rails/engine.rb:522:in `call'
+puma (3.10.0) lib/puma/configuration.rb:225:in `call'
+puma (3.10.0) lib/puma/server.rb:605:in `handle_request'
+puma (3.10.0) lib/puma/server.rb:437:in `process_client'
+puma (3.10.0) lib/puma/server.rb:301:in `block in run'
+puma (3.10.0) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/api/v1/goals" for 127.0.0.1 at 2017-09-22 13:52:52 -0400
+Processing by Api::V1::GoalsController#index as HTML
+  [1m[36mProject Load (0.8ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+Completed 200 OK in 25ms (Views: 16.2ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/api/v1/goals" for 127.0.0.1 at 2017-09-22 13:53:22 -0400
+Processing by Api::V1::GoalsController#index as HTML
+  [1m[36mProject Load (2.7ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+Completed 200 OK in 25ms (Views: 16.7ms | ActiveRecord: 2.7ms)
+
+
+Started GET "/api/v1/goals" for 127.0.0.1 at 2017-09-22 13:53:36 -0400
+Processing by Api::V1::GoalsController#index as HTML
+  [1m[36mProject Load (7.4ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+Completed 200 OK in 15ms (Views: 7.2ms | ActiveRecord: 7.4ms)
+
+
+  [1m[36mProject Load (2.0ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" ORDER BY "projects"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mProject Load (0.4ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."creator_id" = $1 LIMIT $2[0m  [["creator_id", 16], ["LIMIT", 11]]
+Started GET "/api/v1/users/16" for 127.0.0.1 at 2017-09-22 14:16:06 -0400
+Started GET "/api/v1/users" for 127.0.0.1 at 2017-09-22 14:16:06 -0400
+Started GET "/api/v1/projects" for 127.0.0.1 at 2017-09-22 14:16:06 -0400
+  [1m[35m (11.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (12.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (56.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Api::V1::UsersController#show as JSON
+  Parameters: {"id"=>"16", "user"=>{}}
+Processing by Api::V1::UsersController#index as JSON
+  Parameters: {"user"=>{}}
+  [1m[36mUser Load (10.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 16], ["LIMIT", 1]]
+  [1m[36mUser Load (3.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 16], ["LIMIT", 1]]
+Processing by Api::V1::ProjectsController#index as JSON
+  Parameters: {"project"=>{}}
+  [1m[36mUser Load (3.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 16], ["LIMIT", 1]]
+  [1m[36mUser Load (1.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 16], ["LIMIT", 1]]
+  [1m[36mUser Load (2.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 16], ["LIMIT", 1]]
+  [1m[36mUser Load (3.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 16], ["LIMIT", 1]]
+  [1m[36mUser Load (3.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[36mUser Load (15.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 16], ["LIMIT", 1]]
+  [1m[36mProject Load (12.6ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+[active_model_serializers] Rendered UserSerializer with ActiveModelSerializers::Adapter::Attributes (0.73ms)
+Completed 200 OK in 153ms (Views: 70.7ms | ActiveRecord: 40.3ms)
+
+
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (1.4ms)
+Completed 200 OK in 162ms (Views: 87.8ms | ActiveRecord: 34.3ms)
+
+
+[active_model_serializers]   [1m[36mUser Load (4.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mUser Load (6.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mUser Load (1.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 10], ["LIMIT", 1]]
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (97.5ms)
+Completed 200 OK in 216ms (Views: 147.4ms | ActiveRecord: 105.3ms)
+
+
+Started GET "/api/v1/users" for 127.0.0.1 at 2017-09-22 14:16:27 -0400
+Started GET "/api/v1/projects" for 127.0.0.1 at 2017-09-22 14:16:27 -0400
+Processing by Api::V1::ProjectsController#index as JSON
+  Parameters: {"project"=>{}}
+Started GET "/api/v1/users/16" for 127.0.0.1 at 2017-09-22 14:16:27 -0400
+Processing by Api::V1::UsersController#show as JSON
+  Parameters: {"id"=>"16", "user"=>{}}
+Processing by Api::V1::UsersController#index as JSON
+  Parameters: {"user"=>{}}
+  [1m[36mUser Load (140.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 16], ["LIMIT", 1]]
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 16], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 16], ["LIMIT", 1]]
+[active_model_serializers] Rendered UserSerializer with ActiveModelSerializers::Adapter::Attributes (0.93ms)
+Completed 200 OK in 151ms (Views: 5.3ms | ActiveRecord: 140.9ms)
+
+
+  [1m[36mUser Load (4.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 16], ["LIMIT", 1]]
+  [1m[36mUser Load (11.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 16], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 16], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 16], ["LIMIT", 1]]
+  [1m[36mUser Load (15.8ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (1.63ms)
+Completed 200 OK in 313ms (Views: 10.5ms | ActiveRecord: 55.7ms)
+
+
+  [1m[36mProject Load (24.2ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+[active_model_serializers]   [1m[36mUser Load (5.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mCACHE User Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 10], ["LIMIT", 1]]
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (33.37ms)
+Completed 200 OK in 374ms (Views: 45.0ms | ActiveRecord: 92.6ms)
+
+
+Started GET "/api/v1/users/16" for 127.0.0.1 at 2017-09-22 14:17:24 -0400
+Started GET "/api/v1/projects" for 127.0.0.1 at 2017-09-22 14:17:24 -0400
+Started GET "/api/v1/users" for 127.0.0.1 at 2017-09-22 14:17:34 -0400
+Started GET "/api/v1/users" for 127.0.0.1 at 2017-09-22 14:17:34 -0400
+Started GET "/api/v1/projects" for 127.0.0.1 at 2017-09-22 14:17:34 -0400
+Processing by Api::V1::UsersController#show as JSON
+  Parameters: {"id"=>"16", "user"=>{}}
+Processing by Api::V1::ProjectsController#index as JSON
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 16], ["LIMIT", 1]]
+  Parameters: {"project"=>{}}
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 16], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 16], ["LIMIT", 1]]
+  [1m[36mUser Load (2.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 16], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 16], ["LIMIT", 1]]
+[active_model_serializers] Rendered UserSerializer with ActiveModelSerializers::Adapter::Attributes (0.36ms)
+Completed 200 OK in 61ms (Views: 8.1ms | ActiveRecord: 18.0ms)
+
+
+  [1m[36mProject Load (3.9ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+[active_model_serializers]   [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mCACHE User Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 10], ["LIMIT", 1]]
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (19.83ms)
+Completed 200 OK in 56ms (Views: 45.6ms | ActiveRecord: 7.8ms)
+
+
+Processing by Api::V1::UsersController#index as JSON
+Started GET "/api/v1/users/16" for 127.0.0.1 at 2017-09-22 14:17:34 -0400
+  Parameters: {"user"=>{}}
+Processing by Api::V1::UsersController#show as JSON
+Processing by Api::V1::UsersController#index as JSON
+  Parameters: {"id"=>"16", "user"=>{}}
+  Parameters: {"user"=>{}}
+  [1m[36mUser Load (1.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 16], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 16], ["LIMIT", 1]]
+  [1m[36mUser Load (36.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 16], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 16], ["LIMIT", 1]]
+  [1m[36mUser Load (2.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 16], ["LIMIT", 1]]
+  [1m[36mUser Load (3.1ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (2.08ms)
+  [1m[36mUser Load (9.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 16], ["LIMIT", 1]]
+  [1m[36mUser Load (10.6ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+Completed 200 OK in 65ms (Views: 13.0ms | ActiveRecord: 22.7ms)
+
+
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 16], ["LIMIT", 1]]
+Processing by Api::V1::ProjectsController#index as JSON
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (0.97ms)
+Completed 200 OK in 77ms (Views: 11.3ms | ActiveRecord: 61.3ms)
+
+
+[active_model_serializers] Rendered UserSerializer with ActiveModelSerializers::Adapter::Attributes (0.25ms)
+  Parameters: {"project"=>{}}
+Completed 200 OK in 76ms (Views: 9.2ms | ActiveRecord: 60.8ms)
+
+
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 16], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 16], ["LIMIT", 1]]
+  [1m[36mProject Load (1.5ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+[active_model_serializers]   [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 10], ["LIMIT", 1]]
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (41.5ms)
+Completed 200 OK in 153ms (Views: 110.7ms | ActiveRecord: 91.5ms)
+
+
+Started GET "/api/v1/projects" for 127.0.0.1 at 2017-09-22 14:19:41 -0400
+Started GET "/api/v1/users/16" for 127.0.0.1 at 2017-09-22 14:19:42 -0400
+Started GET "/api/v1/users" for 127.0.0.1 at 2017-09-22 14:19:42 -0400
+Processing by Api::V1::ProjectsController#index as JSON
+  Parameters: {"project"=>{}}
+  [1m[36mUser Load (7.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 16], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 16], ["LIMIT", 1]]
+  [1m[36mProject Load (1.9ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+[active_model_serializers]   [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mCACHE User Load (1.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 10], ["LIMIT", 1]]
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (48.02ms)
+Completed 200 OK in 327ms (Views: 206.6ms | ActiveRecord: 68.0ms)
+
+
+Processing by Api::V1::UsersController#show as JSON
+  Parameters: {"id"=>"16", "user"=>{}}
+Processing by Api::V1::UsersController#index as JSON
+  Parameters: {"user"=>{}}
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 16], ["LIMIT", 1]]
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 16], ["LIMIT", 1]]
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 16], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 16], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 16], ["LIMIT", 1]]
+[active_model_serializers] Rendered UserSerializer with ActiveModelSerializers::Adapter::Attributes (0.65ms)
+Completed 200 OK in 44ms (Views: 9.8ms | ActiveRecord: 10.1ms)
+
+
+  [1m[36mUser Load (4.7ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (4.68ms)
+Completed 200 OK in 43ms (Views: 10.9ms | ActiveRecord: 33.9ms)
+
+
+Started GET "/api/v1/projects" for 127.0.0.1 at 2017-09-22 14:21:06 -0400
+Started GET "/api/v1/users" for 127.0.0.1 at 2017-09-22 14:21:06 -0400
+Started GET "/api/v1/users/16" for 127.0.0.1 at 2017-09-22 14:21:07 -0400
+Processing by Api::V1::ProjectsController#index as JSON
+  Parameters: {"project"=>{}}
+Processing by Api::V1::UsersController#index as JSON
+  Parameters: {"user"=>{}}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 16], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 16], ["LIMIT", 1]]
+  [1m[36mUser Load (39.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 16], ["LIMIT", 1]]
+  [1m[36mUser Load (1.6ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 16], ["LIMIT", 1]]
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (7.0ms)
+  [1m[36mProject Load (12.6ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+Completed 200 OK in 62ms (Views: 21.8ms | ActiveRecord: 7.9ms)
+
+
+[active_model_serializers]   [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 10], ["LIMIT", 1]]
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (23.14ms)
+Completed 200 OK in 144ms (Views: 56.2ms | ActiveRecord: 73.7ms)
+
+
+Processing by Api::V1::UsersController#show as JSON
+  Parameters: {"id"=>"16", "user"=>{}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 16], ["LIMIT", 1]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 16], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 16], ["LIMIT", 1]]
+[active_model_serializers] Rendered UserSerializer with ActiveModelSerializers::Adapter::Attributes (0.7ms)
+Completed 200 OK in 27ms (Views: 5.3ms | ActiveRecord: 4.4ms)
+
+
+Started GET "/api/v1/projects" for 127.0.0.1 at 2017-09-22 14:23:20 -0400
+Started GET "/api/v1/users" for 127.0.0.1 at 2017-09-22 14:23:20 -0400
+Started GET "/api/v1/users/16" for 127.0.0.1 at 2017-09-22 14:23:21 -0400
+Processing by Api::V1::ProjectsController#index as JSON
+  Parameters: {"project"=>{}}
+Processing by Api::V1::UsersController#index as JSON
+  Parameters: {"user"=>{}}
+  [1m[36mUser Load (2.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 16], ["LIMIT", 1]]
+  [1m[36mUser Load (24.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 16], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 16], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 16], ["LIMIT", 1]]
+  [1m[36mProject Load (3.4ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  [1m[36mUser Load (1.6ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (11.8ms)
+Completed 200 OK in 57ms (Views: 24.9ms | ActiveRecord: 35.6ms)
+
+
+[active_model_serializers]   [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mCACHE User Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mUser Load (3.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 10], ["LIMIT", 1]]
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (62.86ms)
+Completed 200 OK in 240ms (Views: 149.6ms | ActiveRecord: 54.1ms)
+
+
+Processing by Api::V1::UsersController#show as JSON
+  Parameters: {"id"=>"16", "user"=>{}}
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 16], ["LIMIT", 1]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 16], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 16], ["LIMIT", 1]]
+[active_model_serializers] Rendered UserSerializer with ActiveModelSerializers::Adapter::Attributes (0.36ms)
+Completed 200 OK in 30ms (Views: 3.6ms | ActiveRecord: 5.6ms)
+
+
+  [1m[36mProject Load (7.2ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."creator_id" = $1 LIMIT $2[0m  [["creator_id", 16], ["LIMIT", 11]]
+  [1m[36mProject Load (1.1ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" ORDER BY "projects"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mUser Load (18.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" INNER JOIN "project_users" ON "users"."id" = "project_users"."user_id" WHERE "project_users"."project_id" = $1 LIMIT $2[0m  [["project_id", 7], ["LIMIT", 11]]
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mProject Load (0.6ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."creator_id" = $1 LIMIT $2[0m  [["creator_id", 17], ["LIMIT", 11]]
+  [1m[35m (8.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (33.5ms)[0m  [1m[33mUPDATE "users" SET "updated_at" = $1, "user_image" = $2 WHERE "users"."id" = $3[0m  [["updated_at", "2017-09-22 18:32:58.547585"], ["user_image", "denzel.jpg"], ["id", 17]]
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" LIMIT $1[0m  [["LIMIT", 11]]
+Started POST "/api/v1/users" for 127.0.0.1 at 2017-09-22 14:33:53 -0400
+Processing by Api::V1::UsersController#create as JSON
+  Parameters: {"user"=>{"first_name"=>"Steve", "last_name"=>"Jobs", "email"=>"steve@email.com", "password"=>"[FILTERED]", "role"=>"visionary", "bio"=>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris n"}}
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (6.0ms)[0m  [1m[32mINSERT INTO "users" ("first_name", "last_name", "password_digest", "bio", "role", "email", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["first_name", "Steve"], ["last_name", "Jobs"], ["password_digest", "$2a$10$iPoCrGG2blo8mfYdqMJkI./aCdY9cJcFyEueQc86YVG2l.gVRSJw2"], ["bio", "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris n"], ["role", "visionary"], ["email", "steve@email.com"], ["created_at", "2017-09-22 18:33:53.856415"], ["updated_at", "2017-09-22 18:33:53.856415"]]
+  [1m[35m (1.6ms)[0m  [1m[35mCOMMIT[0m
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (1.26ms)
+Completed 200 OK in 140ms (Views: 11.9ms | ActiveRecord: 8.0ms)
+
+
+Started GET "/api/v1/users" for 127.0.0.1 at 2017-09-22 14:33:54 -0400
+Started GET "/api/v1/projects" for 127.0.0.1 at 2017-09-22 14:33:54 -0400
+Started GET "/api/v1/users/18" for 127.0.0.1 at 2017-09-22 14:33:54 -0400
+Processing by Api::V1::UsersController#index as JSON
+Processing by Api::V1::UsersController#show as JSON
+  Parameters: {"user"=>{}}
+  Parameters: {"id"=>"18", "user"=>{}}
+  [1m[36mUser Load (12.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 18], ["LIMIT", 1]]
+Processing by Api::V1::ProjectsController#index as JSON
+  [1m[36mUser Load (15.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 18], ["LIMIT", 1]]
+  [1m[36mUser Load (1.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 18], ["LIMIT", 1]]
+  Parameters: {"project"=>{}}
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 18], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 18], ["LIMIT", 1]]
+[active_model_serializers] Rendered UserSerializer with ActiveModelSerializers::Adapter::Attributes (0.59ms)
+  [1m[36mUser Load (5.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 18], ["LIMIT", 1]]
+Completed 200 OK in 27ms (Views: 7.4ms | ActiveRecord: 13.9ms)
+
+
+  [1m[36mUser Load (5.0ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 18], ["LIMIT", 1]]
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (6.05ms)
+Completed 200 OK in 43ms (Views: 18.7ms | ActiveRecord: 20.2ms)
+
+
+  [1m[36mProject Load (2.5ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+[active_model_serializers]   [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 10], ["LIMIT", 1]]
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (27.5ms)
+Completed 200 OK in 88ms (Views: 75.9ms | ActiveRecord: 10.3ms)
+
+
+Started POST "/api/v1/users" for 127.0.0.1 at 2017-09-22 14:34:32 -0400
+Processing by Api::V1::UsersController#create as JSON
+  Parameters: {"user"=>{"first_name"=>"Steve", "last_name"=>"Wozniak", "email"=>"woz@email.com", "password"=>"[FILTERED]", "role"=>"engineer", "bio"=>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris."}}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (1.6ms)[0m  [1m[32mINSERT INTO "users" ("first_name", "last_name", "password_digest", "bio", "role", "email", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["first_name", "Steve"], ["last_name", "Wozniak"], ["password_digest", "$2a$10$LqW6GbzImnEyaAWvKB3bbu.BNowZz/B4ATYUX50oFcc7JvTt8LIoq"], ["bio", "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris."], ["role", "engineer"], ["email", "woz@email.com"], ["created_at", "2017-09-22 18:34:32.601987"], ["updated_at", "2017-09-22 18:34:32.601987"]]
+  [1m[35m (5.2ms)[0m  [1m[35mCOMMIT[0m
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (1.04ms)
+Completed 200 OK in 92ms (Views: 2.2ms | ActiveRecord: 7.0ms)
+
+
+Started GET "/api/v1/projects" for 127.0.0.1 at 2017-09-22 14:34:32 -0400
+Processing by Api::V1::ProjectsController#index as JSON
+  Parameters: {"project"=>{}}
+Started GET "/api/v1/users" for 127.0.0.1 at 2017-09-22 14:34:32 -0400
+Processing by Api::V1::UsersController#index as JSON
+  Parameters: {"user"=>{}}
+  [1m[36mUser Load (2.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 19], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 19], ["LIMIT", 1]]
+  [1m[36mUser Load (7.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 19], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 19], ["LIMIT", 1]]
+  [1m[36mProject Load (7.1ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  [1m[36mUser Load (13.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+[active_model_serializers]   [1m[36mUser Load (13.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (21.5ms)
+Started GET "/api/v1/users/19" for 127.0.0.1 at 2017-09-22 14:34:32 -0400
+Completed 200 OK in 66ms (Views: 27.0ms | ActiveRecord: 20.3ms)
+
+
+Processing by Api::V1::UsersController#show as JSON
+[active_model_serializers]   [1m[36mUser Load (13.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  Parameters: {"id"=>"19", "user"=>{}}
+[active_model_serializers]   [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  [1m[36mUser Load (1.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 19], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 10], ["LIMIT", 1]]
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 19], ["LIMIT", 1]]
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (83.61ms)
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 19], ["LIMIT", 1]]
+Completed 200 OK in 121ms (Views: 61.8ms | ActiveRecord: 37.2ms)
+
+
+[active_model_serializers] Rendered UserSerializer with ActiveModelSerializers::Adapter::Attributes (0.36ms)
+Completed 200 OK in 46ms (Views: 2.8ms | ActiveRecord: 1.9ms)
+
+
+  [1m[36mProject Load (1.7ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" LIMIT $1[0m  [["LIMIT", 11]]
+  [1m[36mProject Load (1.2ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (10.6ms)[0m  [1m[31mDELETE FROM "projects" WHERE "projects"."id" = $1[0m  [["id", 2]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (1.0ms)[0m  [1m[31mDELETE FROM "projects" WHERE "projects"."id" = $1[0m  [["id", 3]]
+  [1m[35m (1.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.9ms)[0m  [1m[31mDELETE FROM "projects" WHERE "projects"."id" = $1[0m  [["id", 4]]
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.7ms)[0m  [1m[31mDELETE FROM "projects" WHERE "projects"."id" = $1[0m  [["id", 5]]
+  [1m[35m (2.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (1.1ms)[0m  [1m[31mDELETE FROM "projects" WHERE "projects"."id" = $1[0m  [["id", 6]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[31mDELETE FROM "projects" WHERE "projects"."id" = $1[0m  [["id", 7]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+Started GET "/api/v1/projects" for 127.0.0.1 at 2017-09-22 14:35:44 -0400
+Started GET "/api/v1/users" for 127.0.0.1 at 2017-09-22 14:35:44 -0400
+Processing by Api::V1::ProjectsController#index as JSON
+Processing by Api::V1::UsersController#index as JSON
+  Parameters: {"project"=>{}}
+  Parameters: {"user"=>{}}
+Started GET "/api/v1/users/19" for 127.0.0.1 at 2017-09-22 14:35:44 -0400
+Processing by Api::V1::UsersController#show as JSON
+  [1m[36mUser Load (9.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 19], ["LIMIT", 1]]
+  Parameters: {"id"=>"19", "user"=>{}}
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 19], ["LIMIT", 1]]
+  [1m[36mUser Load (8.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 19], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 19], ["LIMIT", 1]]
+  [1m[36mProject Load (4.2ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (0.55ms)
+Completed 200 OK in 31ms (Views: 6.2ms | ActiveRecord: 13.6ms)
+
+
+  [1m[36mUser Load (7.0ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (8.3ms)
+Completed 200 OK in 44ms (Views: 13.8ms | ActiveRecord: 15.2ms)
+
+
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 19], ["LIMIT", 1]]
+  [1m[36mUser Load (5.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 19], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 19], ["LIMIT", 1]]
+[active_model_serializers] Rendered UserSerializer with ActiveModelSerializers::Adapter::Attributes (0.7ms)
+Completed 200 OK in 43ms (Views: 3.4ms | ActiveRecord: 6.6ms)
+
+
+Started GET "/api/v1/users/19" for 127.0.0.1 at 2017-09-22 14:35:50 -0400
+Started GET "/api/v1/users" for 127.0.0.1 at 2017-09-22 14:35:50 -0400
+Processing by Api::V1::UsersController#show as JSON
+Processing by Api::V1::UsersController#index as JSON
+  Parameters: {"id"=>"19", "user"=>{}}
+  Parameters: {"user"=>{}}
+  [1m[36mUser Load (2.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 19], ["LIMIT", 1]]
+  [1m[36mUser Load (2.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 19], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 19], ["LIMIT", 1]]
+  [1m[36mUser Load (8.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 19], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 19], ["LIMIT", 1]]
+  [1m[36mUser Load (7.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+[active_model_serializers] Rendered UserSerializer with ActiveModelSerializers::Adapter::Attributes (0.68ms)
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (11.85ms)
+Completed 200 OK in 37ms (Views: 20.1ms | ActiveRecord: 11.5ms)
+
+
+Completed 200 OK in 37ms (Views: 21.7ms | ActiveRecord: 9.4ms)
+
+
+Started POST "/api/v1/login" for 127.0.0.1 at 2017-09-22 14:36:05 -0400
+Processing by Api::V1::AuthController#create as JSON
+  Parameters: {"email"=>"steve@email.com", "password"=>"[FILTERED]", "auth"=>{"email"=>"steve@email.com", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (13.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "steve@email.com"], ["LIMIT", 1]]
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (2.46ms)
+Completed 200 OK in 117ms (Views: 3.5ms | ActiveRecord: 13.1ms)
+
+
+Started GET "/api/v1/projects" for 127.0.0.1 at 2017-09-22 14:36:05 -0400
+Processing by Api::V1::ProjectsController#index as JSON
+  Parameters: {"project"=>{}}
+  [1m[36mUser Load (2.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 18], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 18], ["LIMIT", 1]]
+Started GET "/api/v1/users/18" for 127.0.0.1 at 2017-09-22 14:36:05 -0400
+Processing by Api::V1::UsersController#show as JSON
+  Parameters: {"id"=>"18", "user"=>{}}
+Started GET "/api/v1/users" for 127.0.0.1 at 2017-09-22 14:36:05 -0400
+  [1m[36mProject Load (6.4ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+Processing by Api::V1::UsersController#index as JSON
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (0.17ms)
+  Parameters: {"user"=>{}}
+Completed 200 OK in 34ms (Views: 8.6ms | ActiveRecord: 8.5ms)
+
+
+  [1m[36mUser Load (5.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 18], ["LIMIT", 1]]
+  [1m[36mUser Load (3.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 18], ["LIMIT", 1]]
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 18], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 18], ["LIMIT", 1]]
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (6.93ms)
+Completed 200 OK in 104ms (Views: 13.2ms | ActiveRecord: 1.7ms)
+
+
+  [1m[36mCACHE User Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 18], ["LIMIT", 1]]
+[active_model_serializers] Rendered UserSerializer with ActiveModelSerializers::Adapter::Attributes (1.16ms)
+Completed 200 OK in 116ms (Views: 15.6ms | ActiveRecord: 8.2ms)
+
+
+Started GET "/api/v1/users/18" for 127.0.0.1 at 2017-09-22 14:36:07 -0400
+Processing by Api::V1::UsersController#show as JSON
+  Parameters: {"id"=>"18", "user"=>{}}
+Started GET "/api/v1/users" for 127.0.0.1 at 2017-09-22 14:36:07 -0400
+Processing by Api::V1::UsersController#index as JSON
+  Parameters: {"user"=>{}}
+  [1m[36mUser Load (31.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 18], ["LIMIT", 1]]
+  [1m[36mUser Load (34.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 18], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 18], ["LIMIT", 1]]
+  [1m[36mUser Load (5.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 18], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 18], ["LIMIT", 1]]
+  [1m[36mUser Load (6.0ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+[active_model_serializers] Rendered UserSerializer with ActiveModelSerializers::Adapter::Attributes (0.59ms)
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (9.89ms)
+Completed 200 OK in 139ms (Views: 16.0ms | ActiveRecord: 39.9ms)
+
+
+Completed 200 OK in 136ms (Views: 22.4ms | ActiveRecord: 37.8ms)
+
+
+Started POST "/api/v1/projects" for 127.0.0.1 at 2017-09-22 14:36:29 -0400
+Processing by Api::V1::ProjectsController#create as JSON
+  Parameters: {"name"=>"Apple", "category"=>"Tech", "long_desc"=>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris n. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.", "short_desc"=>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris n", "project"=>{"name"=>"Apple", "category"=>"Tech", "long_desc"=>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris n. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.", "short_desc"=>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris n"}}
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 18], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 18], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (18.1ms)[0m  [1m[32mINSERT INTO "projects" ("creator_id", "name", "category", "long_desc", "short_desc", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["creator_id", 18], ["name", "Apple"], ["category", "Tech"], ["long_desc", "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris n. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris."], ["short_desc", "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris n"], ["created_at", "2017-09-22 18:36:29.032641"], ["updated_at", "2017-09-22 18:36:29.032641"]]
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 18], ["LIMIT", 1]]
+  [1m[36mProject Load (0.5ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+[active_model_serializers]   [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 18], ["LIMIT", 1]]
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (3.45ms)
+Completed 200 OK in 39ms (Views: 6.0ms | ActiveRecord: 20.7ms)
+
+
+Started GET "/api/v1/users" for 127.0.0.1 at 2017-09-22 14:36:39 -0400
+Started GET "/api/v1/users/18" for 127.0.0.1 at 2017-09-22 14:36:39 -0400
+Processing by Api::V1::UsersController#show as JSON
+  Parameters: {"id"=>"18", "user"=>{}}
+Processing by Api::V1::UsersController#index as JSON
+  Parameters: {"user"=>{}}
+  [1m[36mUser Load (16.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 18], ["LIMIT", 1]]
+  [1m[36mUser Load (48.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 18], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 18], ["LIMIT", 1]]
+  [1m[36mUser Load (47.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 18], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 18], ["LIMIT", 1]]
+[active_model_serializers] Rendered UserSerializer with ActiveModelSerializers::Adapter::Attributes (1.45ms)
+Completed 200 OK in 146ms (Views: 4.9ms | ActiveRecord: 63.8ms)
+
+
+  [1m[36mUser Load (22.8ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (7.2ms)
+Completed 200 OK in 172ms (Views: 27.5ms | ActiveRecord: 70.9ms)
+
+
+Started GET "/api/v1/projects" for 127.0.0.1 at 2017-09-22 14:36:40 -0400
+Processing by Api::V1::ProjectsController#index as JSON
+  Parameters: {"project"=>{}}
+Started GET "/api/v1/users" for 127.0.0.1 at 2017-09-22 14:36:40 -0400
+Started GET "/api/v1/users/18" for 127.0.0.1 at 2017-09-22 14:36:40 -0400
+Processing by Api::V1::UsersController#index as JSON
+Processing by Api::V1::UsersController#show as JSON
+  Parameters: {"user"=>{}}
+  Parameters: {"id"=>"18", "user"=>{}}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 18], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 18], ["LIMIT", 1]]
+  [1m[36mUser Load (5.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 18], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 18], ["LIMIT", 1]]
+  [1m[36mUser Load (3.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 18], ["LIMIT", 1]]
+  [1m[36mUser Load (4.5ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (5.57ms)
+Completed 200 OK in 25ms (Views: 13.6ms | ActiveRecord: 5.0ms)
+
+
+  [1m[36mUser Load (9.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 18], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 18], ["LIMIT", 1]]
+  [1m[36mProject Load (20.8ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+[active_model_serializers] Rendered UserSerializer with ActiveModelSerializers::Adapter::Attributes (0.81ms)
+[active_model_serializers]   [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 18], ["LIMIT", 1]]
+Completed 200 OK in 44ms (Views: 12.0ms | ActiveRecord: 13.6ms)
+
+
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (7.75ms)
+Completed 200 OK in 87ms (Views: 18.1ms | ActiveRecord: 25.9ms)
+
+
+Started GET "/api/v1/projects" for 127.0.0.1 at 2017-09-22 14:40:39 -0400
+Processing by Api::V1::ProjectsController#index as JSON
+  Parameters: {"project"=>{}}
+  [1m[36mUser Load (7.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 18], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 18], ["LIMIT", 1]]
+Started GET "/api/v1/users" for 127.0.0.1 at 2017-09-22 14:40:39 -0400
+Processing by Api::V1::UsersController#index as JSON
+  Parameters: {"user"=>{}}
+Started GET "/api/v1/users/18" for 127.0.0.1 at 2017-09-22 14:40:39 -0400
+Processing by Api::V1::UsersController#show as JSON
+  Parameters: {"id"=>"18", "user"=>{}}
+  [1m[36mUser Load (33.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 18], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 18], ["LIMIT", 1]]
+  [1m[36mProject Load (44.4ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  [1m[36mUser Load (2.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 18], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 18], ["LIMIT", 1]]
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (49.09ms)
+Completed 200 OK in 292ms (Views: 179.4ms | ActiveRecord: 51.7ms)
+
+
+  [1m[36mUser Load (70.0ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (16.33ms)
+  [1m[36mUser Load (47.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 18], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 18], ["LIMIT", 1]]
+[active_model_serializers] Rendered UserSerializer with ActiveModelSerializers::Adapter::Attributes (1.4ms)
+Completed 200 OK in 240ms (Views: 28.8ms | ActiveRecord: 49.8ms)
+
+
+Completed 200 OK in 224ms (Views: 101.6ms | ActiveRecord: 103.1ms)
+
+
+Started GET "/api/v1/projects" for 127.0.0.1 at 2017-09-22 14:40:59 -0400
+Processing by Api::V1::ProjectsController#index as JSON
+  Parameters: {"project"=>{}}
+Started GET "/api/v1/users" for 127.0.0.1 at 2017-09-22 14:40:59 -0400
+Started GET "/api/v1/users/18" for 127.0.0.1 at 2017-09-22 14:40:59 -0400
+Processing by Api::V1::UsersController#index as JSON
+  [1m[36mUser Load (17.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 18], ["LIMIT", 1]]
+Processing by Api::V1::UsersController#show as JSON
+  Parameters: {"user"=>{}}
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 18], ["LIMIT", 1]]
+  Parameters: {"id"=>"18", "user"=>{}}
+  [1m[36mProject Load (5.2ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+[active_model_serializers]   [1m[36mCACHE User Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 18], ["LIMIT", 1]]
+  [1m[36mUser Load (8.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 18], ["LIMIT", 1]]
+  [1m[36mUser Load (10.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 18], ["LIMIT", 1]]
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (56.8ms)
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 18], ["LIMIT", 1]]
+  [1m[36mUser Load (2.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 18], ["LIMIT", 1]]
+Completed 200 OK in 106ms (Views: 67.0ms | ActiveRecord: 22.5ms)
+
+
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 18], ["LIMIT", 1]]
+  [1m[36mUser Load (3.5ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+[active_model_serializers] Rendered UserSerializer with ActiveModelSerializers::Adapter::Attributes (0.71ms)
+Completed 200 OK in 89ms (Views: 18.2ms | ActiveRecord: 11.8ms)
+
+
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (95.02ms)
+Completed 200 OK in 178ms (Views: 105.0ms | ActiveRecord: 14.2ms)
+
+
+Started GET "/api/v1/projects" for 127.0.0.1 at 2017-09-22 14:41:03 -0400
+Processing by Api::V1::ProjectsController#index as JSON
+  Parameters: {"project"=>{}}
+Started GET "/api/v1/users" for 127.0.0.1 at 2017-09-22 14:41:03 -0400
+Processing by Api::V1::UsersController#index as JSON
+  Parameters: {"user"=>{}}
+Started GET "/api/v1/users/18" for 127.0.0.1 at 2017-09-22 14:41:03 -0400
+Processing by Api::V1::UsersController#show as JSON
+  Parameters: {"id"=>"18", "user"=>{}}
+  [1m[36mUser Load (15.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 18], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 18], ["LIMIT", 1]]
+  [1m[36mProject Load (17.6ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 18], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 18], ["LIMIT", 1]]
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (32.66ms)
+Completed 200 OK in 141ms (Views: 52.6ms | ActiveRecord: 32.9ms)
+
+
+  [1m[36mUser Load (39.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 18], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 18], ["LIMIT", 1]]
+[active_model_serializers] Rendered UserSerializer with ActiveModelSerializers::Adapter::Attributes (1.56ms)
+Completed 200 OK in 129ms (Views: 3.9ms | ActiveRecord: 41.1ms)
+
+
+  [1m[36mUser Load (62.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 18], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 18], ["LIMIT", 1]]
+  [1m[36mUser Load (58.6ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (6.87ms)
+Completed 200 OK in 272ms (Views: 53.6ms | ActiveRecord: 121.6ms)
+
+
+  [1m[36mUser Load (5.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mUser Load (2.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.8ms)[0m  [1m[33mUPDATE "users" SET "updated_at" = $1, "user_image" = $2 WHERE "users"."id" = $3[0m  [["updated_at", "2017-09-22 18:42:38.019856"], ["user_image", "woz.jpg"], ["id", 19]]
+  [1m[35m (7.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mUser Load (17.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 18], ["LIMIT", 1]]
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[33mUPDATE "users" SET "updated_at" = $1, "user_image" = $2 WHERE "users"."id" = $3[0m  [["updated_at", "2017-09-22 18:43:17.178412"], ["user_image", "steve.jpg"], ["id", 18]]
+  [1m[35m (6.5ms)[0m  [1m[35mCOMMIT[0m
+Started GET "/api/v1/projects" for 127.0.0.1 at 2017-09-22 14:43:22 -0400
+Started GET "/api/v1/users/18" for 127.0.0.1 at 2017-09-22 14:43:22 -0400
+Started GET "/api/v1/users" for 127.0.0.1 at 2017-09-22 14:43:22 -0400
+Processing by Api::V1::ProjectsController#index as JSON
+Processing by Api::V1::UsersController#show as JSON
+Processing by Api::V1::UsersController#index as JSON
+  Parameters: {"id"=>"18", "user"=>{}}
+  Parameters: {"project"=>{}}
+  Parameters: {"user"=>{}}
+  [1m[36mUser Load (11.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 18], ["LIMIT", 1]]
+  [1m[36mUser Load (38.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 18], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 18], ["LIMIT", 1]]
+  [1m[36mUser Load (30.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 18], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 18], ["LIMIT", 1]]
+[active_model_serializers] Rendered UserSerializer with ActiveModelSerializers::Adapter::Attributes (1.0ms)
+Completed 200 OK in 69ms (Views: 4.7ms | ActiveRecord: 42.2ms)
+
+
+  [1m[36mUser Load (67.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 18], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 18], ["LIMIT", 1]]
+  [1m[36mProject Load (29.1ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+[active_model_serializers]   [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 18], ["LIMIT", 1]]
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (7.0ms)
+Completed 200 OK in 94ms (Views: 15.5ms | ActiveRecord: 67.8ms)
+
+
+  [1m[36mUser Load (29.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (8.13ms)
+Completed 200 OK in 119ms (Views: 14.9ms | ActiveRecord: 96.8ms)
+
+
+Started GET "/api/v1/users" for 127.0.0.1 at 2017-09-22 14:45:20 -0400
+Started GET "/api/v1/projects" for 127.0.0.1 at 2017-09-22 14:45:20 -0400
+Started GET "/api/v1/users/18" for 127.0.0.1 at 2017-09-22 14:45:20 -0400
+Processing by Api::V1::UsersController#index as JSON
+Processing by Api::V1::ProjectsController#index as JSON
+Processing by Api::V1::UsersController#show as JSON
+  Parameters: {"user"=>{}}
+  Parameters: {"project"=>{}}
+  Parameters: {"id"=>"18", "user"=>{}}
+  [1m[36mUser Load (2.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 18], ["LIMIT", 1]]
+  [1m[36mUser Load (2.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 18], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 18], ["LIMIT", 1]]
+  [1m[36mUser Load (14.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 18], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 18], ["LIMIT", 1]]
+  [1m[36mUser Load (4.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 18], ["LIMIT", 1]]
+  [1m[36mProject Load (6.6ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  [1m[36mCACHE User Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 18], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mCACHE User Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 18], ["LIMIT", 1]]
+[active_model_serializers] Rendered UserSerializer with ActiveModelSerializers::Adapter::Attributes (3.37ms)
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (24.32ms)
+Completed 200 OK in 89ms (Views: 48.6ms | ActiveRecord: 9.5ms)
+
+
+Completed 200 OK in 86ms (Views: 35.9ms | ActiveRecord: 18.9ms)
+
+
+  [1m[36mUser Load (34.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (10.4ms)
+Completed 200 OK in 118ms (Views: 37.3ms | ActiveRecord: 36.5ms)
+
+
+Started GET "/api/v1/projects" for 127.0.0.1 at 2017-09-22 14:45:42 -0400
+Processing by Api::V1::ProjectsController#index as JSON
+  Parameters: {"project"=>{}}
+Started GET "/api/v1/users" for 127.0.0.1 at 2017-09-22 14:45:42 -0400
+Processing by Api::V1::UsersController#index as JSON
+  Parameters: {"user"=>{}}
+Started GET "/api/v1/users/18" for 127.0.0.1 at 2017-09-22 14:45:42 -0400
+Processing by Api::V1::UsersController#show as JSON
+  Parameters: {"id"=>"18", "user"=>{}}
+  [1m[36mUser Load (70.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 18], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 18], ["LIMIT", 1]]
+  [1m[36mProject Load (37.6ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  [1m[36mUser Load (5.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 18], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 18], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 18], ["LIMIT", 1]]
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (14.52ms)
+  [1m[36mUser Load (5.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 18], ["LIMIT", 1]]
+Completed 200 OK in 240ms (Views: 20.4ms | ActiveRecord: 108.2ms)
+
+
+  [1m[36mUser Load (7.1ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (10.41ms)
+Completed 200 OK in 252ms (Views: 24.9ms | ActiveRecord: 12.3ms)
+
+
+  [1m[36mUser Load (26.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 18], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 18], ["LIMIT", 1]]
+[active_model_serializers] Rendered UserSerializer with ActiveModelSerializers::Adapter::Attributes (0.76ms)
+Completed 200 OK in 248ms (Views: 2.8ms | ActiveRecord: 31.9ms)
+
+
