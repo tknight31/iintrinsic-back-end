@@ -678,3 +678,961 @@ Processing by Api::V1::ProjectsController#index as */*
 Completed 200 OK in 324ms (Views: 246.7ms | ActiveRecord: 37.5ms)
 
 
+Started GET "/api/v1/projects" for 127.0.0.1 at 2017-09-21 09:58:31 -0400
+Processing by Api::V1::ProjectsController#index as */*
+  [1m[36mProject Load (21.1ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+Completed 200 OK in 292ms (Views: 256.5ms | ActiveRecord: 21.1ms)
+
+
+Started GET "/api/v1/projects" for 127.0.0.1 at 2017-09-21 09:58:48 -0400
+Processing by Api::V1::ProjectsController#index as */*
+  [1m[36mProject Load (15.1ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+Completed 200 OK in 100ms (Views: 76.7ms | ActiveRecord: 15.1ms)
+
+
+Started GET "/api/v1/projects" for 127.0.0.1 at 2017-09-21 11:13:02 -0400
+Processing by Api::V1::ProjectsController#index as */*
+  [1m[36mProject Load (21.4ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+Completed 200 OK in 309ms (Views: 250.8ms | ActiveRecord: 21.4ms)
+
+
+Started GET "/api/v1/projects" for 127.0.0.1 at 2017-09-21 11:30:38 -0400
+Processing by Api::V1::ProjectsController#index as */*
+  [1m[36mProject Load (27.7ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+Completed 200 OK in 212ms (Views: 179.1ms | ActiveRecord: 27.7ms)
+
+
+Started GET "/api/v1/projects" for 127.0.0.1 at 2017-09-21 11:31:03 -0400
+Processing by Api::V1::ProjectsController#index as */*
+  [1m[36mProject Load (7.0ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+Completed 200 OK in 128ms (Views: 102.8ms | ActiveRecord: 7.0ms)
+
+
+Started POST "/api/v1/users" for 127.0.0.1 at 2017-09-21 11:52:00 -0400
+Processing by Api::V1::UsersController#create as JSON
+  Parameters: {"first_name"=>"Francis", "last_name"=>"Savannah", "email"=>"fs@me.com", "password"=>"[FILTERED]", "role"=>"engineer", "bio"=>"here", "user"=>{"first_name"=>"Francis", "last_name"=>"Savannah", "bio"=>"here", "role"=>"engineer", "email"=>"fs@me.com"}}
+  [1m[35m (0.9ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (1.2ms)[0m  [1m[31mROLLBACK[0m
+Completed 204 No Content in 206ms (ActiveRecord: 129.5ms)
+
+
+Started POST "/api/v1/users" for 127.0.0.1 at 2017-09-21 11:53:31 -0400
+Processing by Api::V1::UsersController#create as JSON
+  Parameters: {"first_name"=>"Francis", "last_name"=>"Savannah", "email"=>"fs@me.com", "password"=>"[FILTERED]", "role"=>"engineer", "bio"=>"cscijcsidjc", "user"=>{"first_name"=>"Francis", "last_name"=>"Savannah", "bio"=>"cscijcsidjc", "role"=>"engineer", "email"=>"fs@me.com"}}
+Completed 500 Internal Server Error in 1192105ms (ActiveRecord: 0.0ms)
+
+
+  
+SystemExit (exit):
+  
+(byebug):1:in `exit'
+(byebug):1:in `create'
+app/controllers/api/v1/users_controller.rb:6:in `create'
+  [1m[36mUser Load (8.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+Started POST "/api/v1/users" for 127.0.0.1 at 2017-09-21 13:24:08 -0400
+  [1m[35m (4.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Api::V1::UsersController#create as JSON
+  Parameters: {"first_name"=>"Francis", "last_name"=>"Savannah", "email"=>"fs@me.com", "password"=>"[FILTERED]", "role"=>"engineer", "bio"=>"ncjdncsdc", "user"=>{"first_name"=>"Francis", "last_name"=>"Savannah", "bio"=>"ncjdncsdc", "role"=>"engineer", "email"=>"fs@me.com"}}
+  [1m[35m (1.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (1.3ms)[0m  [1m[31mROLLBACK[0m
+Completed 204 No Content in 42ms (ActiveRecord: 12.1ms)
+
+
+Started POST "/api/v1/users" for 127.0.0.1 at 2017-09-21 13:31:46 -0400
+  [1m[35m (2.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Api::V1::UsersController#create as JSON
+  Parameters: {"first_name"=>"Francis", "last_name"=>"Savannah", "email"=>"fw@g.com", "password"=>"[FILTERED]", "role"=>"engineer", "bio"=>"a little", "user"=>{"first_name"=>"Francis", "last_name"=>"Savannah", "bio"=>"a little", "role"=>"engineer", "email"=>"fw@g.com"}}
+Started POST "/api/v1/users" for 127.0.0.1 at 2017-09-21 13:31:55 -0400
+Processing by Api::V1::UsersController#create as JSON
+  Parameters: {"first_name"=>"Francis", "last_name"=>"Savannah", "email"=>"fw@g.com", "password"=>"[FILTERED]", "role"=>"engineer", "bio"=>"a little", "user"=>{"first_name"=>"Francis", "last_name"=>"Savannah", "bio"=>"a little", "role"=>"engineer", "email"=>"fw@g.com"}}
+  [1m[35m (5.8ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (1.5ms)[0m  [1m[31mROLLBACK[0m
+Completed 500 Internal Server Error in 1135270ms (ActiveRecord: 89.4ms)
+
+
+Completed 500 Internal Server Error in 1127592ms (ActiveRecord: 0.0ms)
+
+
+  
+  
+SystemExit (exit):
+SystemExit (exit):
+  
+  
+(byebug):1:in `exit'
+(byebug):1:in `create'
+app/controllers/api/v1/users_controller.rb:6:in `create'
+(byebug):1:in `exit'
+(byebug):1:in `create'
+app/controllers/api/v1/users_controller.rb:6:in `create'
+Started POST "/api/v1/users" for 127.0.0.1 at 2017-09-21 13:55:53 -0400
+  [1m[35m (3.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Api::V1::UsersController#create as JSON
+  Parameters: {"user"=>{"first_name"=>"Francis", "last_name"=>"Savannah", "email"=>"fs@me.com", "password"=>"[FILTERED]", "role"=>"engineer", "bio"=>"a little"}}
+  [1m[35m (4.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (34.6ms)[0m  [1m[32mINSERT INTO "users" ("first_name", "last_name", "password_digest", "bio", "role", "email", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["first_name", "Francis"], ["last_name", "Savannah"], ["password_digest", "$2a$10$zblg5OfceS6GaAbx.y8cvO4ifJlqQ2ZnXmYLtm2H58KSO2vFNwlYy"], ["bio", "a little"], ["role", "engineer"], ["email", "fs@me.com"], ["created_at", "2017-09-21 17:57:47.875219"], ["updated_at", "2017-09-21 17:57:47.875219"]]
+  [1m[35m (2.5ms)[0m  [1m[35mCOMMIT[0m
+Completed 200 OK in 114097ms (Views: 6.0ms | ActiveRecord: 63.7ms)
+
+
+Started GET "/api/v1/projects" for 127.0.0.1 at 2017-09-21 13:57:48 -0400
+Processing by Api::V1::ProjectsController#index as */*
+  [1m[36mProject Load (4.0ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+Completed 200 OK in 720ms (Views: 272.5ms | ActiveRecord: 64.0ms)
+
+
+Started GET "/api/v1/projects" for 127.0.0.1 at 2017-09-21 14:03:14 -0400
+Processing by Api::V1::ProjectsController#index as */*
+  [1m[36mProject Load (29.2ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+Completed 200 OK in 158ms (Views: 109.9ms | ActiveRecord: 29.2ms)
+
+
+Started GET "/api/v1/projects" for 127.0.0.1 at 2017-09-21 14:05:34 -0400
+Processing by Api::V1::ProjectsController#index as */*
+  [1m[36mProject Load (5.1ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+Completed 200 OK in 220ms (Views: 207.7ms | ActiveRecord: 5.1ms)
+
+
+  [1m[36mUser Load (6.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+Started POST "/api/v1/login" for 127.0.0.1 at 2017-09-21 14:13:11 -0400
+Processing by Api::V1::AuthController#create as JSON
+  Parameters: {"user"=>{"email"=>"fs@me.com", "password"=>"[FILTERED]"}, "auth"=>{"user"=>{"email"=>"fs@me.com", "password"=>"[FILTERED]"}}}
+  [1m[36mUser Load (3.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+Completed 204 No Content in 49ms (ActiveRecord: 13.3ms)
+
+
+Started GET "/api/v1/projects" for 127.0.0.1 at 2017-09-21 14:14:54 -0400
+Processing by Api::V1::ProjectsController#index as */*
+  [1m[36mProject Load (4.7ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+Completed 200 OK in 266ms (Views: 164.0ms | ActiveRecord: 22.5ms)
+
+
+Started GET "/api/v1/projects" for 127.0.0.1 at 2017-09-21 14:16:14 -0400
+Processing by Api::V1::ProjectsController#index as */*
+  [1m[36mProject Load (2.0ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+Completed 200 OK in 73ms (Views: 44.1ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/api/v1/projects" for 127.0.0.1 at 2017-09-21 14:16:24 -0400
+Processing by Api::V1::ProjectsController#index as */*
+  [1m[36mProject Load (2.4ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+Completed 200 OK in 16ms (Views: 13.1ms | ActiveRecord: 2.4ms)
+
+
+Started POST "/api/v1/login" for 127.0.0.1 at 2017-09-21 14:22:09 -0400
+Processing by Api::V1::AuthController#create as JSON
+  Parameters: {"email"=>"fs@me.com", "password"=>"[FILTERED]", "auth"=>{"email"=>"fs@me.com", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (4.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "fs@me.com"], ["LIMIT", 1]]
+Completed 200 OK in 272ms (Views: 6.3ms | ActiveRecord: 16.9ms)
+
+
+Started GET "/api/v1/projects" for 127.0.0.1 at 2017-09-21 14:22:49 -0400
+Processing by Api::V1::ProjectsController#index as */*
+  [1m[36mProject Load (2.0ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+Completed 200 OK in 182ms (Views: 167.3ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/api/v1/projects" for 127.0.0.1 at 2017-09-21 14:23:37 -0400
+Processing by Api::V1::ProjectsController#index as */*
+  [1m[36mProject Load (1.7ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+Completed 200 OK in 64ms (Views: 54.8ms | ActiveRecord: 1.7ms)
+
+
+Started POST "/api/v1/login" for 127.0.0.1 at 2017-09-21 14:24:09 -0400
+Processing by Api::V1::AuthController#create as JSON
+  Parameters: {"email"=>"fs@me.com", "password"=>"[FILTERED]", "auth"=>{"email"=>"fs@me.com", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (1.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "fs@me.com"], ["LIMIT", 1]]
+Completed 200 OK in 111ms (Views: 9.1ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/api/v1/projects" for 127.0.0.1 at 2017-09-21 14:24:10 -0400
+Processing by Api::V1::ProjectsController#index as */*
+  [1m[36mProject Load (2.0ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+Completed 200 OK in 32ms (Views: 28.8ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-09-21 15:07:57 -0400
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /Users/flatironschool/.rvm/gems/ruby-2.3.3/gems/railties-5.1.4/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/flatironschool/.rvm/gems/ruby-2.3.3/gems/railties-5.1.4/lib/rails/templates/rails/welcome/index.html.erb (36.4ms)
+Completed 200 OK in 242ms (Views: 209.8ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/api/v1/login" for 127.0.0.1 at 2017-09-21 15:17:55 -0400
+Processing by Api::V1::AuthController#create as JSON
+  Parameters: {"email"=>"fs@me.com", "password"=>"[FILTERED]", "auth"=>{"email"=>"fs@me.com", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (17.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "fs@me.com"], ["LIMIT", 1]]
+Completed 200 OK in 327ms (Views: 35.7ms | ActiveRecord: 17.6ms)
+
+
+Started GET "/api/v1/projects" for 127.0.0.1 at 2017-09-21 15:17:55 -0400
+Processing by Api::V1::ProjectsController#index as */*
+  [1m[36mProject Load (7.9ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+Completed 200 OK in 68ms (Views: 51.4ms | ActiveRecord: 7.9ms)
+
+
+Started GET "/api/v1/projects" for 127.0.0.1 at 2017-09-21 15:18:45 -0400
+Processing by Api::V1::ProjectsController#index as */*
+  [1m[36mProject Load (8.1ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+Completed 200 OK in 93ms (Views: 77.1ms | ActiveRecord: 8.1ms)
+
+
+Started GET "/api/v1/projects" for 127.0.0.1 at 2017-09-21 15:20:40 -0400
+Processing by Api::V1::ProjectsController#index as */*
+  [1m[36mProject Load (8.0ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+Completed 200 OK in 87ms (Views: 67.4ms | ActiveRecord: 8.0ms)
+
+
+Started GET "/api/v1/projects" for 127.0.0.1 at 2017-09-21 15:21:22 -0400
+Processing by Api::V1::ProjectsController#index as */*
+  [1m[36mProject Load (9.8ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+Completed 200 OK in 80ms (Views: 61.9ms | ActiveRecord: 9.8ms)
+
+
+Started GET "/api/v1/projects" for 127.0.0.1 at 2017-09-21 15:27:08 -0400
+Processing by Api::V1::ProjectsController#index as */*
+  [1m[36mProject Load (7.1ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+Completed 200 OK in 167ms (Views: 152.6ms | ActiveRecord: 7.1ms)
+
+
+Started GET "/api/v1/projects" for 127.0.0.1 at 2017-09-21 15:30:40 -0400
+Processing by Api::V1::ProjectsController#index as */*
+  [1m[36mProject Load (4.0ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+Completed 200 OK in 102ms (Views: 83.5ms | ActiveRecord: 4.0ms)
+
+
+Started GET "/api/v1/projects" for 127.0.0.1 at 2017-09-21 15:54:44 -0400
+Processing by Api::V1::ProjectsController#index as */*
+  [1m[36mProject Load (30.4ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+Completed 200 OK in 419ms (Views: 367.3ms | ActiveRecord: 30.4ms)
+
+
+Started GET "/api/v1/projects" for 127.0.0.1 at 2017-09-21 15:57:02 -0400
+Processing by Api::V1::ProjectsController#index as */*
+  [1m[36mProject Load (11.1ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+Completed 200 OK in 185ms (Views: 149.6ms | ActiveRecord: 11.1ms)
+
+
+Started GET "/api/v1/projects" for 127.0.0.1 at 2017-09-21 15:57:44 -0400
+Processing by Api::V1::ProjectsController#index as */*
+  [1m[36mProject Load (8.6ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+Completed 200 OK in 182ms (Views: 127.4ms | ActiveRecord: 8.6ms)
+
+
+Started GET "/api/v1/projects" for 127.0.0.1 at 2017-09-21 16:01:46 -0400
+Processing by Api::V1::ProjectsController#index as */*
+  [1m[36mProject Load (8.8ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+Completed 200 OK in 217ms (Views: 201.6ms | ActiveRecord: 8.8ms)
+
+
+Started GET "/api/v1/projects" for 127.0.0.1 at 2017-09-21 16:01:58 -0400
+Processing by Api::V1::ProjectsController#index as */*
+  [1m[36mProject Load (7.2ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+Completed 200 OK in 120ms (Views: 77.6ms | ActiveRecord: 7.2ms)
+
+
+Started GET "/api/v1/projects" for 127.0.0.1 at 2017-09-21 16:06:03 -0400
+Processing by Api::V1::ProjectsController#index as */*
+  [1m[36mProject Load (5.0ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+Completed 200 OK in 104ms (Views: 93.9ms | ActiveRecord: 5.0ms)
+
+
+Started GET "/api/v1/projects" for 127.0.0.1 at 2017-09-21 16:11:25 -0400
+Processing by Api::V1::ProjectsController#index as */*
+  [1m[36mProject Load (9.8ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+Completed 200 OK in 142ms (Views: 120.5ms | ActiveRecord: 9.8ms)
+
+
+Started GET "/api/v1/projects" for 127.0.0.1 at 2017-09-21 16:13:45 -0400
+Processing by Api::V1::ProjectsController#index as */*
+  [1m[36mProject Load (7.8ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+Completed 200 OK in 129ms (Views: 114.4ms | ActiveRecord: 7.8ms)
+
+
+Started GET "/api/v1/projects" for 127.0.0.1 at 2017-09-21 16:30:25 -0400
+Processing by Api::V1::ProjectsController#index as */*
+  [1m[36mProject Load (56.2ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+Completed 200 OK in 465ms (Views: 385.8ms | ActiveRecord: 56.2ms)
+
+
+Started GET "/api/v1/projects" for 127.0.0.1 at 2017-09-21 16:37:06 -0400
+Processing by Api::V1::ProjectsController#index as */*
+Redirected to http://localhost:3000/api/v1/login
+Filter chain halted as :authorized rendered or redirected
+Completed 302 Found in 16ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/api/v1/login" for 127.0.0.1 at 2017-09-21 16:37:07 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/api/v1/login"):
+  
+actionpack (5.1.4) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.4) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.4) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+rack-cors (1.0.1) lib/rack/cors.rb:93:in `call'
+railties (5.1.4) lib/rails/engine.rb:522:in `call'
+puma (3.10.0) lib/puma/configuration.rb:225:in `call'
+puma (3.10.0) lib/puma/server.rb:605:in `handle_request'
+puma (3.10.0) lib/puma/server.rb:437:in `process_client'
+puma (3.10.0) lib/puma/server.rb:301:in `block in run'
+puma (3.10.0) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/api/v1/projects" for 127.0.0.1 at 2017-09-21 16:38:14 -0400
+Processing by Api::V1::ProjectsController#index as */*
+Redirected to http://localhost:3000/api/v1/login
+Filter chain halted as :authorized rendered or redirected
+Completed 302 Found in 17ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/api/v1/login" for 127.0.0.1 at 2017-09-21 16:38:14 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/api/v1/login"):
+  
+actionpack (5.1.4) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.4) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.4) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+rack-cors (1.0.1) lib/rack/cors.rb:93:in `call'
+railties (5.1.4) lib/rails/engine.rb:522:in `call'
+puma (3.10.0) lib/puma/configuration.rb:225:in `call'
+puma (3.10.0) lib/puma/server.rb:605:in `handle_request'
+puma (3.10.0) lib/puma/server.rb:437:in `process_client'
+puma (3.10.0) lib/puma/server.rb:301:in `block in run'
+puma (3.10.0) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/api/v1/projects" for 127.0.0.1 at 2017-09-21 16:39:23 -0400
+Processing by Api::V1::ProjectsController#index as */*
+Redirected to http://localhost:3000/api/v1/login
+Filter chain halted as :authorized rendered or redirected
+Completed 302 Found in 14ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/api/v1/login" for 127.0.0.1 at 2017-09-21 16:39:23 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/api/v1/login"):
+  
+actionpack (5.1.4) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.4) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.4) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+rack-cors (1.0.1) lib/rack/cors.rb:93:in `call'
+railties (5.1.4) lib/rails/engine.rb:522:in `call'
+puma (3.10.0) lib/puma/configuration.rb:225:in `call'
+puma (3.10.0) lib/puma/server.rb:605:in `handle_request'
+puma (3.10.0) lib/puma/server.rb:437:in `process_client'
+puma (3.10.0) lib/puma/server.rb:301:in `block in run'
+puma (3.10.0) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/api/v1/projects" for 127.0.0.1 at 2017-09-21 16:41:25 -0400
+Processing by Api::V1::ProjectsController#index as */*
+Redirected to http://localhost:3000/api/v1/login
+Filter chain halted as :authorized rendered or redirected
+Completed 302 Found in 2ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/api/v1/login" for 127.0.0.1 at 2017-09-21 16:41:26 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/api/v1/login"):
+  
+actionpack (5.1.4) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.4) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.4) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+rack-cors (1.0.1) lib/rack/cors.rb:93:in `call'
+railties (5.1.4) lib/rails/engine.rb:522:in `call'
+puma (3.10.0) lib/puma/configuration.rb:225:in `call'
+puma (3.10.0) lib/puma/server.rb:605:in `handle_request'
+puma (3.10.0) lib/puma/server.rb:437:in `process_client'
+puma (3.10.0) lib/puma/server.rb:301:in `block in run'
+puma (3.10.0) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/api/v1/projects" for 127.0.0.1 at 2017-09-21 16:42:48 -0400
+Processing by Api::V1::ProjectsController#index as */*
+Redirected to http://localhost:3000/api/v1/login
+Filter chain halted as :authorized rendered or redirected
+Completed 302 Found in 3ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/api/v1/login" for 127.0.0.1 at 2017-09-21 16:42:48 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/api/v1/login"):
+  
+actionpack (5.1.4) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.4) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.4) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+rack-cors (1.0.1) lib/rack/cors.rb:93:in `call'
+railties (5.1.4) lib/rails/engine.rb:522:in `call'
+puma (3.10.0) lib/puma/configuration.rb:225:in `call'
+puma (3.10.0) lib/puma/server.rb:605:in `handle_request'
+puma (3.10.0) lib/puma/server.rb:437:in `process_client'
+puma (3.10.0) lib/puma/server.rb:301:in `block in run'
+puma (3.10.0) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/api/v1/projects" for 127.0.0.1 at 2017-09-21 16:43:01 -0400
+Processing by Api::V1::ProjectsController#index as */*
+Redirected to http://localhost:3000/api/v1/login
+Filter chain halted as :authorized rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/api/v1/login" for 127.0.0.1 at 2017-09-21 16:43:02 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/api/v1/login"):
+  
+actionpack (5.1.4) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.4) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.4) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+rack-cors (1.0.1) lib/rack/cors.rb:93:in `call'
+railties (5.1.4) lib/rails/engine.rb:522:in `call'
+puma (3.10.0) lib/puma/configuration.rb:225:in `call'
+puma (3.10.0) lib/puma/server.rb:605:in `handle_request'
+puma (3.10.0) lib/puma/server.rb:437:in `process_client'
+puma (3.10.0) lib/puma/server.rb:301:in `block in run'
+puma (3.10.0) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/api/v1/projects" for 127.0.0.1 at 2017-09-21 16:43:41 -0400
+Processing by Api::V1::ProjectsController#index as */*
+Redirected to http://localhost:3000/api/v1/login
+Filter chain halted as :authorized rendered or redirected
+Completed 302 Found in 3ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/api/v1/login" for 127.0.0.1 at 2017-09-21 16:43:42 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/api/v1/login"):
+  
+actionpack (5.1.4) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.4) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.4) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+rack-cors (1.0.1) lib/rack/cors.rb:93:in `call'
+railties (5.1.4) lib/rails/engine.rb:522:in `call'
+puma (3.10.0) lib/puma/configuration.rb:225:in `call'
+puma (3.10.0) lib/puma/server.rb:605:in `handle_request'
+puma (3.10.0) lib/puma/server.rb:437:in `process_client'
+puma (3.10.0) lib/puma/server.rb:301:in `block in run'
+puma (3.10.0) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/api/v1/projects" for 127.0.0.1 at 2017-09-21 16:45:34 -0400
+Processing by Api::V1::ProjectsController#index as JSON
+  Parameters: {"project"=>{}}
+  [1m[36mUser Load (12.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 10], ["LIMIT", 1]]
+  [1m[36mProject Load (0.5ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+Completed 200 OK in 276ms (Views: 43.1ms | ActiveRecord: 230.4ms)
+
+
+Started GET "/api/v1/projects" for 127.0.0.1 at 2017-09-21 16:49:43 -0400
+Processing by Api::V1::ProjectsController#index as JSON
+  Parameters: {"project"=>{}}
+  [1m[36mUser Load (2.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 10], ["LIMIT", 1]]
+  [1m[36mProject Load (0.5ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+Completed 200 OK in 88ms (Views: 25.4ms | ActiveRecord: 35.6ms)
+
+
+Started POST "/api/v1/projects" for 127.0.0.1 at 2017-09-21 16:50:03 -0400
+Processing by Api::V1::ProjectsController#create as JSON
+  Parameters: {"name"=>"Also made this with Redux", "category"=>"Food", "long_desc"=>"als a long", "short_desc"=>"here is a short", "project"=>{"name"=>"Also made this with Redux", "category"=>"Food", "long_desc"=>"als a long", "short_desc"=>"here is a short"}}
+  [1m[36mUser Load (2.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 10], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 10], ["LIMIT", 1]]
+  [1m[35m (1.7ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (19.0ms)[0m  [1m[32mINSERT INTO "projects" ("creator_id", "name", "category", "long_desc", "short_desc", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["creator_id", 10], ["name", "Also made this with Redux"], ["category", "Food"], ["long_desc", "als a long"], ["short_desc", "here is a short"], ["created_at", "2017-09-21 20:50:04.102767"], ["updated_at", "2017-09-21 20:50:04.102767"]]
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mProject Load (1.3ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+Completed 200 OK in 144ms (Views: 3.2ms | ActiveRecord: 25.3ms)
+
+
+Started GET "/api/v1/projects" for 127.0.0.1 at 2017-09-21 17:02:43 -0400
+Processing by Api::V1::ProjectsController#index as JSON
+  Parameters: {"project"=>{}}
+  [1m[36mUser Load (31.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 10], ["LIMIT", 1]]
+  [1m[36mProject Load (15.6ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+Completed 200 OK in 231ms (Views: 25.1ms | ActiveRecord: 46.6ms)
+
+
+Started GET "/api/v1/projects" for 127.0.0.1 at 2017-09-21 17:02:52 -0400
+Processing by Api::V1::ProjectsController#index as JSON
+  Parameters: {"project"=>{}}
+  [1m[36mUser Load (2.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 10], ["LIMIT", 1]]
+  [1m[36mProject Load (0.9ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+Completed 200 OK in 378ms (Views: 84.8ms | ActiveRecord: 3.9ms)
+
+
+Started GET "/api/v1/projects" for 127.0.0.1 at 2017-09-21 17:07:09 -0400
+Processing by Api::V1::ProjectsController#index as JSON
+  Parameters: {"project"=>{}}
+  [1m[36mUser Load (9.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 10], ["LIMIT", 1]]
+  [1m[36mProject Load (6.3ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+Completed 200 OK in 102ms (Views: 44.4ms | ActiveRecord: 15.7ms)
+
+
+Started GET "/api/v1/projects" for 127.0.0.1 at 2017-09-21 17:07:21 -0400
+Processing by Api::V1::ProjectsController#index as JSON
+  Parameters: {"project"=>{}}
+  [1m[36mUser Load (2.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 10], ["LIMIT", 1]]
+  [1m[36mProject Load (3.2ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+Completed 200 OK in 277ms (Views: 106.4ms | ActiveRecord: 5.4ms)
+
+
+Started POST "/api/v1/login" for 127.0.0.1 at 2017-09-21 17:07:57 -0400
+Processing by Api::V1::AuthController#create as JSON
+  Parameters: {"email"=>"fs@me.com", "password"=>"[FILTERED]", "auth"=>{"email"=>"fs@me.com", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (11.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "fs@me.com"], ["LIMIT", 1]]
+Completed 200 OK in 128ms (Views: 3.9ms | ActiveRecord: 11.4ms)
+
+
+Started GET "/api/v1/projects" for 127.0.0.1 at 2017-09-21 17:07:57 -0400
+Processing by Api::V1::ProjectsController#index as JSON
+  Parameters: {"project"=>{}}
+  [1m[36mUser Load (1.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 10], ["LIMIT", 1]]
+  [1m[36mProject Load (1.3ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+Completed 200 OK in 36ms (Views: 13.9ms | ActiveRecord: 2.8ms)
+
+
+Started GET "/api/v1/projects" for 127.0.0.1 at 2017-09-21 17:11:21 -0400
+Processing by Api::V1::ProjectsController#index as JSON
+  Parameters: {"project"=>{}}
+  [1m[36mUser Load (13.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 10], ["LIMIT", 1]]
+  [1m[36mProject Load (4.0ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+Completed 200 OK in 265ms (Views: 99.9ms | ActiveRecord: 17.3ms)
+
+
+Started GET "/api/v1/projects" for 127.0.0.1 at 2017-09-21 17:11:34 -0400
+Processing by Api::V1::ProjectsController#index as JSON
+  Parameters: {"project"=>{}}
+  [1m[36mUser Load (5.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 10], ["LIMIT", 1]]
+  [1m[36mProject Load (1.1ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+Completed 200 OK in 198ms (Views: 84.5ms | ActiveRecord: 6.0ms)
+
+
+Started GET "/api/v1/projects" for 127.0.0.1 at 2017-09-21 17:13:04 -0400
+Processing by Api::V1::ProjectsController#index as JSON
+  Parameters: {"project"=>{}}
+  [1m[36mUser Load (1.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 10], ["LIMIT", 1]]
+  [1m[36mProject Load (1.1ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+Completed 200 OK in 84ms (Views: 38.5ms | ActiveRecord: 2.5ms)
+
+
+Started GET "/api/v1/projects" for 127.0.0.1 at 2017-09-21 17:15:17 -0400
+Processing by Api::V1::ProjectsController#index as JSON
+  Parameters: {"project"=>{}}
+  [1m[36mUser Load (2.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 10], ["LIMIT", 1]]
+  [1m[36mProject Load (1.5ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+Completed 200 OK in 191ms (Views: 130.1ms | ActiveRecord: 4.1ms)
+
+
+Started GET "/api/v1/projects" for 127.0.0.1 at 2017-09-21 17:17:59 -0400
+Processing by Api::V1::ProjectsController#index as JSON
+  Parameters: {"project"=>{}}
+  [1m[36mUser Load (5.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 10], ["LIMIT", 1]]
+  [1m[36mProject Load (6.8ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+Completed 200 OK in 192ms (Views: 133.2ms | ActiveRecord: 12.4ms)
+
+
+Started GET "/api/v1/projects" for 127.0.0.1 at 2017-09-21 17:20:49 -0400
+Processing by Api::V1::ProjectsController#index as JSON
+  Parameters: {"project"=>{}}
+  [1m[36mUser Load (4.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 10], ["LIMIT", 1]]
+  [1m[36mProject Load (5.5ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+Completed 200 OK in 414ms (Views: 240.6ms | ActiveRecord: 9.5ms)
+
+
+Started GET "/api/v1/projects" for 127.0.0.1 at 2017-09-21 17:55:38 -0400
+Processing by Api::V1::ProjectsController#index as JSON
+  Parameters: {"project"=>{}}
+  [1m[36mUser Load (16.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 10], ["LIMIT", 1]]
+  [1m[36mProject Load (19.2ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+Completed 200 OK in 317ms (Views: 142.0ms | ActiveRecord: 35.2ms)
+
+
+Started GET "/api/v1/projects" for 127.0.0.1 at 2017-09-21 17:56:30 -0400
+Processing by Api::V1::ProjectsController#index as JSON
+  Parameters: {"project"=>{}}
+  [1m[36mUser Load (4.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 10], ["LIMIT", 1]]
+  [1m[36mProject Load (5.6ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+Completed 200 OK in 296ms (Views: 232.4ms | ActiveRecord: 10.3ms)
+
+
+Started GET "/api/v1/projects" for 127.0.0.1 at 2017-09-21 17:59:02 -0400
+Processing by Api::V1::ProjectsController#index as JSON
+  Parameters: {"project"=>{}}
+  [1m[36mUser Load (4.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 10], ["LIMIT", 1]]
+  [1m[36mProject Load (2.4ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+Completed 200 OK in 232ms (Views: 147.6ms | ActiveRecord: 6.8ms)
+
+
+Started GET "/api/v1/projects" for 127.0.0.1 at 2017-09-21 18:00:27 -0400
+Processing by Api::V1::ProjectsController#index as JSON
+  Parameters: {"project"=>{}}
+  [1m[36mUser Load (5.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 10], ["LIMIT", 1]]
+  [1m[36mProject Load (7.9ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+Completed 200 OK in 347ms (Views: 215.8ms | ActiveRecord: 13.4ms)
+
+
+Started GET "/api/v1/projects" for 127.0.0.1 at 2017-09-21 18:02:36 -0400
+Processing by Api::V1::ProjectsController#index as JSON
+  Parameters: {"project"=>{}}
+  [1m[36mUser Load (13.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 10], ["LIMIT", 1]]
+  [1m[36mProject Load (4.3ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+Completed 200 OK in 566ms (Views: 331.0ms | ActiveRecord: 18.0ms)
+
+
+Started GET "/api/v1/projects" for 127.0.0.1 at 2017-09-21 18:03:02 -0400
+Processing by Api::V1::ProjectsController#index as JSON
+  Parameters: {"project"=>{}}
+  [1m[36mUser Load (2.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 10], ["LIMIT", 1]]
+  [1m[36mProject Load (0.8ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+Completed 200 OK in 28ms (Views: 10.4ms | ActiveRecord: 2.9ms)
+
+
+Started POST "/api/v1/login" for 127.0.0.1 at 2017-09-21 18:06:19 -0400
+Processing by Api::V1::AuthController#create as JSON
+  Parameters: {"email"=>"fs@me.com", "password"=>"[FILTERED]", "auth"=>{"email"=>"fs@me.com", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (18.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "fs@me.com"], ["LIMIT", 1]]
+Completed 200 OK in 167ms (Views: 12.3ms | ActiveRecord: 18.9ms)
+
+
+Started GET "/api/v1/projects" for 127.0.0.1 at 2017-09-21 18:06:19 -0400
+Processing by Api::V1::ProjectsController#index as JSON
+  Parameters: {"project"=>{}}
+  [1m[36mUser Load (2.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 10], ["LIMIT", 1]]
+  [1m[36mProject Load (2.9ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+Completed 200 OK in 63ms (Views: 50.6ms | ActiveRecord: 5.0ms)
+
+
+Started GET "/api/v1/projects" for 127.0.0.1 at 2017-09-21 18:06:31 -0400
+Processing by Api::V1::ProjectsController#index as JSON
+  Parameters: {"project"=>{}}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 10], ["LIMIT", 1]]
+  [1m[36mProject Load (3.2ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+Completed 200 OK in 92ms (Views: 56.4ms | ActiveRecord: 3.8ms)
+
+
+Started GET "/api/v1/projects" for 127.0.0.1 at 2017-09-21 18:06:44 -0400
+Processing by Api::V1::ProjectsController#index as JSON
+  Parameters: {"project"=>{}}
+Redirected to http://localhost:3000/api/v1/login
+Filter chain halted as :authorized rendered or redirected
+Completed 302 Found in 14ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/api/v1/login" for 127.0.0.1 at 2017-09-21 18:06:44 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/api/v1/login"):
+  
+actionpack (5.1.4) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.4) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.4) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+rack-cors (1.0.1) lib/rack/cors.rb:93:in `call'
+railties (5.1.4) lib/rails/engine.rb:522:in `call'
+puma (3.10.0) lib/puma/configuration.rb:225:in `call'
+puma (3.10.0) lib/puma/server.rb:605:in `handle_request'
+puma (3.10.0) lib/puma/server.rb:437:in `process_client'
+puma (3.10.0) lib/puma/server.rb:301:in `block in run'
+puma (3.10.0) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started POST "/api/v1/login" for 127.0.0.1 at 2017-09-21 18:14:25 -0400
+Processing by Api::V1::AuthController#create as JSON
+  Parameters: {"email"=>"fs@me.com", "password"=>"[FILTERED]", "auth"=>{"email"=>"fs@me.com", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (18.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "fs@me.com"], ["LIMIT", 1]]
+Completed 200 OK in 223ms (Views: 7.9ms | ActiveRecord: 18.7ms)
+
+
+Started GET "/api/v1/projects" for 127.0.0.1 at 2017-09-21 18:14:25 -0400
+Processing by Api::V1::ProjectsController#index as JSON
+  Parameters: {"project"=>{}}
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 10], ["LIMIT", 1]]
+  [1m[36mProject Load (14.8ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+Completed 200 OK in 293ms (Views: 163.4ms | ActiveRecord: 15.7ms)
+
+
+Started GET "/api/v1/projects" for 127.0.0.1 at 2017-09-21 18:15:11 -0400
+Processing by Api::V1::ProjectsController#index as JSON
+  Parameters: {"project"=>{}}
+  [1m[36mUser Load (18.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 10], ["LIMIT", 1]]
+  [1m[36mProject Load (3.6ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+Completed 200 OK in 149ms (Views: 64.1ms | ActiveRecord: 21.6ms)
+
+
+Started GET "/api/v1/projects" for 127.0.0.1 at 2017-09-21 18:16:06 -0400
+Processing by Api::V1::ProjectsController#index as JSON
+  Parameters: {"project"=>{}}
+  [1m[36mUser Load (9.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 10], ["LIMIT", 1]]
+Started GET "/api/v1/users" for 127.0.0.1 at 2017-09-21 18:16:06 -0400
+  [1m[36mProject Load (201.8ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+Completed 200 OK in 444ms (Views: 86.4ms | ActiveRecord: 211.0ms)
+
+
+  
+AbstractController::ActionNotFound (The action 'index' could not be found for Api::V1::UsersController):
+  
+actionpack (5.1.4) lib/abstract_controller/base.rb:119:in `process'
+actionpack (5.1.4) lib/action_controller/metal.rb:189:in `dispatch'
+actionpack (5.1.4) lib/action_controller/metal.rb:253:in `dispatch'
+actionpack (5.1.4) lib/action_dispatch/routing/route_set.rb:49:in `dispatch'
+actionpack (5.1.4) lib/action_dispatch/routing/route_set.rb:31:in `serve'
+actionpack (5.1.4) lib/action_dispatch/journey/router.rb:50:in `block in serve'
+actionpack (5.1.4) lib/action_dispatch/journey/router.rb:33:in `each'
+actionpack (5.1.4) lib/action_dispatch/journey/router.rb:33:in `serve'
+actionpack (5.1.4) lib/action_dispatch/routing/route_set.rb:834:in `call'
+rack (2.0.3) lib/rack/etag.rb:25:in `call'
+rack (2.0.3) lib/rack/conditional_get.rb:25:in `call'
+rack (2.0.3) lib/rack/head.rb:12:in `call'
+activerecord (5.1.4) lib/active_record/migration.rb:556:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/callbacks.rb:26:in `block in call'
+activesupport (5.1.4) lib/active_support/callbacks.rb:97:in `run_callbacks'
+actionpack (5.1.4) lib/action_dispatch/middleware/callbacks.rb:24:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/debug_exceptions.rb:59:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.4) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.4) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+rack-cors (1.0.1) lib/rack/cors.rb:93:in `call'
+railties (5.1.4) lib/rails/engine.rb:522:in `call'
+puma (3.10.0) lib/puma/configuration.rb:225:in `call'
+puma (3.10.0) lib/puma/server.rb:605:in `handle_request'
+puma (3.10.0) lib/puma/server.rb:437:in `process_client'
+puma (3.10.0) lib/puma/server.rb:301:in `block in run'
+puma (3.10.0) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/api/v1/users" for 127.0.0.1 at 2017-09-21 20:46:31 -0400
+Started GET "/api/v1/projects" for 127.0.0.1 at 2017-09-21 20:46:31 -0400
+  [1m[35m (4.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (5.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (9.4ms)[0m  [1m[34mSELECT pg_try_advisory_lock(23093717504787195)[0m
+  [1m[35m (5.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (4.6ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.7ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT pg_advisory_unlock(23093717504787195)[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/" for 127.0.0.1 at 2017-09-21 21:32:04 -0400
+  [1m[35m (4.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /Users/flatironschool/.rvm/gems/ruby-2.3.3/gems/railties-5.1.4/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/flatironschool/.rvm/gems/ruby-2.3.3/gems/railties-5.1.4/lib/rails/templates/rails/welcome/index.html.erb (4.7ms)
+Completed 200 OK in 14ms (Views: 10.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/favicon.ico" for 127.0.0.1 at 2017-09-21 21:32:06 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/favicon.ico"):
+  
+actionpack (5.1.4) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.4) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.4) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+rack-cors (1.0.1) lib/rack/cors.rb:93:in `call'
+railties (5.1.4) lib/rails/engine.rb:522:in `call'
+puma (3.10.0) lib/puma/configuration.rb:225:in `call'
+puma (3.10.0) lib/puma/server.rb:605:in `handle_request'
+puma (3.10.0) lib/puma/server.rb:437:in `process_client'
+puma (3.10.0) lib/puma/server.rb:301:in `block in run'
+puma (3.10.0) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started POST "/api/v1/login" for 127.0.0.1 at 2017-09-21 21:37:38 -0400
+Processing by Api::V1::AuthController#create as JSON
+  Parameters: {"email"=>"fs@me.com", "password"=>"[FILTERED]", "auth"=>{"email"=>"fs@me.com", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (6.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "fs@me.com"], ["LIMIT", 1]]
+Completed 200 OK in 227ms (Views: 1.4ms | ActiveRecord: 78.2ms)
+
+
+Started GET "/api/v1/projects" for 127.0.0.1 at 2017-09-21 21:37:39 -0400
+Started GET "/api/v1/users" for 127.0.0.1 at 2017-09-21 21:37:39 -0400
+Processing by Api::V1::ProjectsController#index as JSON
+Processing by Api::V1::UsersController#index as JSON
+  Parameters: {"project"=>{}}
+  Parameters: {"user"=>{}}
+  [1m[36mUser Load (6.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 10], ["LIMIT", 1]]
+  [1m[36mProject Load (12.8ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+Completed 200 OK in 49ms (Views: 24.1ms | ActiveRecord: 26.6ms)
+
+
+  [1m[36mUser Load (2.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 10], ["LIMIT", 1]]
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+Completed 200 OK in 61ms (Views: 5.9ms | ActiveRecord: 43.7ms)
+
+
+Started GET "/api/v1/projects" for 127.0.0.1 at 2017-09-21 21:55:15 -0400
+Processing by Api::V1::ProjectsController#index as JSON
+  Parameters: {"project"=>{}}
+Started GET "/api/v1/users" for 127.0.0.1 at 2017-09-21 21:55:15 -0400
+Processing by Api::V1::UsersController#index as JSON
+  Parameters: {"user"=>{}}
+  [1m[36mUser Load (53.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 10], ["LIMIT", 1]]
+  [1m[36mProject Load (2.0ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+Completed 200 OK in 113ms (Views: 5.2ms | ActiveRecord: 69.3ms)
+
+
+  [1m[36mUser Load (21.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 10], ["LIMIT", 1]]
+  [1m[36mUser Load (4.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+Completed 200 OK in 127ms (Views: 4.8ms | ActiveRecord: 26.2ms)
+
+
+Started GET "/api/v1/projects" for 127.0.0.1 at 2017-09-21 22:20:02 -0400
+Started GET "/api/v1/users" for 127.0.0.1 at 2017-09-21 22:20:02 -0400
+Processing by Api::V1::ProjectsController#index as JSON
+Processing by Api::V1::UsersController#index as JSON
+  Parameters: {"user"=>{}}
+  Parameters: {"project"=>{}}
+  [1m[36mUser Load (14.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 10], ["LIMIT", 1]]
+  [1m[36mProject Load (3.2ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+Completed 200 OK in 42ms (Views: 12.6ms | ActiveRecord: 17.4ms)
+
+
+  [1m[36mUser Load (4.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 10], ["LIMIT", 1]]
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+Completed 200 OK in 67ms (Views: 11.2ms | ActiveRecord: 16.3ms)
+
+
+Started GET "/api/v1/projects" for 127.0.0.1 at 2017-09-21 22:22:02 -0400
+Processing by Api::V1::ProjectsController#index as JSON
+  Parameters: {"project"=>{}}
+Started GET "/api/v1/users" for 127.0.0.1 at 2017-09-21 22:22:02 -0400
+Processing by Api::V1::UsersController#index as JSON
+  Parameters: {"user"=>{}}
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 10], ["LIMIT", 1]]
+  [1m[36mUser Load (1.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 10], ["LIMIT", 1]]
+  [1m[36mUser Load (5.0ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+Completed 200 OK in 142ms (Views: 5.7ms | ActiveRecord: 6.2ms)
+
+
+  [1m[36mProject Load (10.3ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+Completed 200 OK in 162ms (Views: 6.6ms | ActiveRecord: 11.7ms)
+
+
+Started GET "/api/v1/projects" for 127.0.0.1 at 2017-09-21 22:22:58 -0400
+Processing by Api::V1::ProjectsController#index as JSON
+  Parameters: {"project"=>{}}
+  [1m[36mUser Load (6.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 10], ["LIMIT", 1]]
+Started GET "/api/v1/users" for 127.0.0.1 at 2017-09-21 22:22:58 -0400
+Processing by Api::V1::UsersController#index as JSON
+  Parameters: {"user"=>{}}
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 10], ["LIMIT", 1]]
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+Completed 200 OK in 33ms (Views: 5.8ms | ActiveRecord: 1.5ms)
+
+
+  [1m[36mProject Load (44.9ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+Completed 200 OK in 62ms (Views: 5.6ms | ActiveRecord: 51.8ms)
+
+
+Started GET "/api/v1/projects" for 127.0.0.1 at 2017-09-21 22:23:23 -0400
+Processing by Api::V1::ProjectsController#index as JSON
+  Parameters: {"project"=>{}}
+Started GET "/api/v1/users" for 127.0.0.1 at 2017-09-21 22:23:23 -0400
+Processing by Api::V1::UsersController#index as JSON
+  Parameters: {"user"=>{}}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 10], ["LIMIT", 1]]
+  [1m[36mUser Load (2.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 10], ["LIMIT", 1]]
+  [1m[36mUser Load (2.0ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+Completed 200 OK in 83ms (Views: 7.7ms | ActiveRecord: 2.5ms)
+
+
+  [1m[36mProject Load (9.0ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+Completed 200 OK in 91ms (Views: 4.6ms | ActiveRecord: 11.0ms)
+
+

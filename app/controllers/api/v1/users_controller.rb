@@ -1,4 +1,10 @@
 class Api::V1::UsersController < ApplicationController
+  before_action :authorized, only: [:me, :index]
+
+    def index
+      render json: User.all
+    end
+
 
     def create
       @user = User.new(user_params)
@@ -9,6 +15,10 @@ class Api::V1::UsersController < ApplicationController
       ## send some error message
       end
     end
+
+
+
+    private
 
     def user_params
       params.require(:user).permit(:first_name, :last_name, :password, :email, :bio, :role, :user_image)

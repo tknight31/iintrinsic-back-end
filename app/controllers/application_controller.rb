@@ -2,13 +2,13 @@ class ApplicationController < ActionController::API
 
   # this will take a hash and return a jwt token
   def issue_token(payload)
-    JWT.encode(payload, "beefysteak")
+    JWT.encode(payload, "theo62529vulture")
   end
 
 
   def decoded_token(token)
     begin
-      JWT.decode(token, "beefysteak", true, {:algorithm =>'HS256'}) # Returns [{}, {}, {}]
+      JWT.decode(token, "theo62529vulture", true, {:algorithm =>'HS256'}) # Returns [{}, {}, {}]
     rescue JWT::DecodeError
       []
     end

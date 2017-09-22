@@ -1,4 +1,5 @@
 class Api::V1::ProjectsController < ApplicationController
+  before_action :authorized, only: [:index,:create, :update, :destroy]
 
   def index
     render json: Project.all
@@ -6,7 +7,7 @@ class Api::V1::ProjectsController < ApplicationController
 
   def create
     @project = Project.new(project_params)
-    @project.creator_id = 6
+    @project.creator = current_user
     @project.save
 
     index
