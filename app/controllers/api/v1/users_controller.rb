@@ -1,5 +1,5 @@
 class Api::V1::UsersController < ApplicationController
-  before_action :authorized, only: [:me, :index]
+  before_action :authorized, only: [:me, :index, :show]
 
     def index
       render json: User.all
@@ -14,6 +14,11 @@ class Api::V1::UsersController < ApplicationController
       else
       ## send some error message
       end
+    end
+
+    def show
+      @user = User.find(params[:id])
+      render json: @user
     end
 
 
