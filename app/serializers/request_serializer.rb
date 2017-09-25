@@ -1,6 +1,6 @@
 class RequestSerializer < ActiveModel::Serializer
-  belongs_to :user
   belongs_to :project
+  belongs_to :user
 
-  attributes :id, :user_id, :project_id
+  attributes :id, :user, :project_id, :current_status
 end
