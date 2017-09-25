@@ -1,5 +1,5 @@
 class Api::V1::UsersController < ApplicationController
-  before_action :authorized, only: [:me, :index, :show]
+  before_action :authorized, only: [:me, :index, :show, :update]
 
     def index
       render json: User.all
@@ -22,11 +22,19 @@ class Api::V1::UsersController < ApplicationController
     end
 
 
+    def update
+      @user = User.find(params[:id])
+    		@user.update(latitude: params[:latitude], longitude: params[:longitude])
+
+      render json: @user
+    end
+
+
 
     private
 
     def user_params
-      params.require(:user).permit(:first_name, :last_name, :password, :email, :bio, :role, :user_image)
+      params.require(:user).permit(:first_name, :last_name, :password, :email, :bio, :role, :user_image, :latitude, :longitude)
     end
 
 
