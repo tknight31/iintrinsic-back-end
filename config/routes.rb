@@ -10,6 +10,7 @@ Rails.application.routes.draw do
 	      resources :users
 				post '/login', to: 'auth#create'
 				post '/skills', to: 'skills#create'
+				get '/skills/:id', to: 'skills#show'
 				get '/me', to: 'users#me'
 				post '/users/:id', to: 'users#update'
     	end
