@@ -9,6 +9,7 @@ Rails.application.routes.draw do
 	      resources :goals
 	      resources :users
 				post '/login', to: 'auth#create'
+				post '/skills', to: 'skills#create'
 				get '/me', to: 'users#me'
 				post '/users/:id', to: 'users#update'
     	end
