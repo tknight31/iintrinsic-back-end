@@ -1,5 +1,5 @@
 class Api::V1::ProjectsController < ApplicationController
-  before_action :authorized, only: [:index,:create, :update, :destroy]
+  before_action :authorized, only: [:index, :show, :create, :update, :destroy, :users]
 
   def index
     render json: Project.all
@@ -11,6 +11,21 @@ class Api::V1::ProjectsController < ApplicationController
     @project.save
 
     index
+  end
+
+  def show
+    @project = Project.find(params[:id])
+    render json: @project
+  end
+
+  def users
+    @project = Project.find(params[:id])
+    render json: @project.users
+  end
+
+  def user_remove
+    @project = Project.find(params[:id])
+    render json: @project.users
   end
 
   def update

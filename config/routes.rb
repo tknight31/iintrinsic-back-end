@@ -11,6 +11,8 @@ Rails.application.routes.draw do
 				post '/login', to: 'auth#create'
 				post '/skills', to: 'skills#create'
 				get '/skills/:id', to: 'skills#show'
+				get '/projects/:id', to: 'projects#show'
+				get '/projects/:id/users', to: 'projects#users'
 				get '/me', to: 'users#me'
 				post '/users/:id', to: 'users#update'
     	end
