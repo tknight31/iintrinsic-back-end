@@ -19,7 +19,14 @@ class Api::V1::SkillsController < ApplicationController
     render json: @user.skills
   end
 
+  def destroy
+    @skill = Skill.find(params[:id])
+    @user_skill =  UserSkill.find_by(skill: @skill, user: current_user)
+    @user_skill.destroy
 
+    render json: current_user.skills
+
+  end
 
 
 end
