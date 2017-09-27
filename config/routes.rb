@@ -12,7 +12,10 @@ Rails.application.routes.draw do
 				post '/skills', to: 'skills#create'
 				get '/skills/:id', to: 'skills#show'
 				get '/projects/:id', to: 'projects#show'
+				post '/requests/:id', to: 'requests#update'
 				get '/projects/:id/users', to: 'projects#users'
+				get '/projects/created/:id', to: 'projects#created_projects'
+				get '/projects/user/:id', to: 'projects#projects'
 				get '/me', to: 'users#me'
 				post '/users/:id', to: 'users#update'
     	end

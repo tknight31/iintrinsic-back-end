@@ -9,6 +9,14 @@ class Api::V1::RequestsController < ApplicationController
       render json: Project.all
     end
 
+    def update
+      @request = Request.find(params[:id])
+      @request.current_status = params[:status]
+      @request.save
+
+      render json: current_user.created_projects
+    end
+
 
 
 
