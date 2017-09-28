@@ -18,6 +18,7 @@ Rails.application.routes.draw do
 				get '/projects/user/:id', to: 'projects#projects'
 				get '/me', to: 'users#me'
 				post '/users/:id', to: 'users#update'
+				post '/users/:id/ghost', to: 'users#update_ghost'
     	end
     end
 end

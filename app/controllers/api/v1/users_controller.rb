@@ -29,6 +29,13 @@ class Api::V1::UsersController < ApplicationController
       render json: @user
     end
 
+    def update_ghost
+      @user = current_user
+        @user.update(ghost_mode: params[:ghost_mode])
+
+      render json: @user.ghost_mode
+    end
+
 
 
     private
