@@ -6,9 +6,14 @@ class Api::V1::ProjectsController < ApplicationController
   end
 
   def create
-    @project = Project.new(project_params)
+
+    @project = Project.new(name: params[:name], category: params[:category], short_desc: params[:short_desc], long_desc: params[:long_desc])
     @project.creator = current_user
     @project.save
+
+    params[:goals].each do |goal|
+      Goal.create(description: goal[:desc], project: @project)
+    end
 
     index
   end
@@ -59,7 +64,7 @@ class Api::V1::ProjectsController < ApplicationController
   private
 
   def project_params
-    params.require(:project).permit(:name, :long_desc, :short_desc, :category, :project_link, :target_launch, :project_image)
+    params.require(:project).permit(:name, :long_desc, :short_desc, :category, :goals, :project_link, :target_launch, :project_image)
   end
 
 end

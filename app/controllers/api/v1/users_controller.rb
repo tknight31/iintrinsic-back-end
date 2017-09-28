@@ -21,19 +21,34 @@ class Api::V1::UsersController < ApplicationController
       render json: @user
     end
 
-
     def update
+      @user = current_user
+        @user.update(first_name: params[:first_name], last_name: params[:last_name], role: params[:role], bio: params[:bio])
+      render json: @user
+    end
+
+
+    def update_location
       @user = User.find(params[:id])
     		@user.update(latitude: params[:latitude], longitude: params[:longitude])
 
       render json: @user
     end
 
+
+
     def update_ghost
       @user = current_user
         @user.update(ghost_mode: params[:ghost_mode])
 
       render json: @user.ghost_mode
+    end
+
+
+    def update_image
+      @user = current_user
+        @user.update(user_image: params[:user_image])
+      render json: {url: @user.user_image}
     end
 
 
