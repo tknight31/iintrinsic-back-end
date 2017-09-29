@@ -7,7 +7,7 @@ class Api::V1::ProjectsController < ApplicationController
 
   def create
 
-    @project = Project.new(name: params[:name], category: params[:category], short_desc: params[:short_desc], long_desc: params[:long_desc])
+    @project = Project.new(name: params[:name], category: params[:category], short_desc: params[:short_desc], long_desc: params[:long_desc], project_image: params[:project_image])
     @project.creator = current_user
     @project.save
 
@@ -68,6 +68,13 @@ class Api::V1::ProjectsController < ApplicationController
 
 
   def destroy
+    @project = Project.find(params[:id])
+    @user = @project.creator
+
+    @project.destroy
+
+    @created_projects = @user.created_projects
+    render json: @created_projects
   end
 
 

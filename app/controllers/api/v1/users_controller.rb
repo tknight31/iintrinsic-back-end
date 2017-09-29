@@ -8,7 +8,14 @@ class Api::V1::UsersController < ApplicationController
 
     def create
       @user = User.new(user_params)
+
       if @user.save
+
+        params[:skills].each do |skill|
+          @temp_skill = Skill.find_or_create_by(name: skill[:name])
+          @user_skill = UserSkill.new(user: @user, skill: @temp_skill)
+          @user_skill.save         
+        end
         payload = { user_id: @user.id}
         render json: {user: @user, jwt: issue_token(payload)}
       else

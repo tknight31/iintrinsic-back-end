@@ -13,6 +13,7 @@ Rails.application.routes.draw do
 				get '/skills/:id', to: 'skills#show'
 				get '/projects/:id', to: 'projects#show'
 				post '/projects/:id', to: 'projects#update'
+				delete '/projects/:id', to: 'projects#destroy'
 				post '/requests/:id', to: 'requests#update'
 				get '/projects/:id/users', to: 'projects#users'
 				get '/projects/created/:id', to: 'projects#created_projects'
