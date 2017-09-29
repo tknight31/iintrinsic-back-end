@@ -12,6 +12,7 @@ Rails.application.routes.draw do
 				post '/skills', to: 'skills#create'
 				get '/skills/:id', to: 'skills#show'
 				get '/projects/:id', to: 'projects#show'
+				post '/projects/:id', to: 'projects#update'
 				post '/requests/:id', to: 'requests#update'
 				get '/projects/:id/users', to: 'projects#users'
 				get '/projects/created/:id', to: 'projects#created_projects'
@@ -21,6 +22,7 @@ Rails.application.routes.draw do
 				post '/users/:id/location', to: 'users#update_location'
 				post '/users/:id/ghost', to: 'users#update_ghost'
 				post '/users/:id/image', to: 'users#update_image'
+				post '/projects/:id/image', to: 'projects#update_image'
     	end
     end
 end

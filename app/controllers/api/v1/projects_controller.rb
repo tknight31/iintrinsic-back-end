@@ -12,10 +12,16 @@ class Api::V1::ProjectsController < ApplicationController
     @project.save
 
     params[:goals].each do |goal|
-      Goal.create(description: goal[:desc], project: @project)
+      Goal.create(description: goal[:description], project: @project)
     end
 
     index
+  end
+
+  def update
+    @project = Project.find(params[:id])
+    @project.update(name: params[:name], category: params[:category], short_desc: params[:short_desc], long_desc: params[:long_desc])
+    render json: @project
   end
 
   def show
@@ -54,8 +60,12 @@ class Api::V1::ProjectsController < ApplicationController
     render json: @project.users
   end
 
-  def update
+  def update_image
+    @project = Project.find(params[:id])
+      @project.update(project_image: params[:project_image])
+    render json: {url: @project.project_image}
   end
+
 
   def destroy
   end
